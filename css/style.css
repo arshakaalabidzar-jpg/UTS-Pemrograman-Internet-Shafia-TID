@@ -4200,18 +4200,18 @@ h1 em,h2 em,blockquote em{font-style:normal;color:var(--shafia-yellow)}
   color: #66636A;
 }
 
-/* BACK TO TOP BUTTON */
-.shafia_back-to-top {
+/* TOMBOL KEMBALI KE HEADER */
+a.shafia_back-to-top {
     width: 48px !important;
     height: 48px !important;
     min-width: 48px !important;
     padding: 0 !important;
 
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
 
-    background-color: #F2E8E8 !important;
+    background: #F2E8E8 !important;
     border: 1px solid #E5D5D5 !important;
     border-radius: 10px !important;
 
@@ -4227,9 +4227,8 @@ h1 em,h2 em,blockquote em{font-style:normal;color:var(--shafia-yellow)}
     transition: all 0.3s ease !important;
 }
 
-.shafia_back-to-top:hover {
-    background-color: #D9BFC3 !important;
-    border-color: #D9BFC3 !important;
+a.shafia_back-to-top:hover {
+    background: #D9BFC3 !important;
     color: #FFFFFF !important;
     transform: translateY(-4px);
 }
