@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jelajahi pilihan produk WHISKAS® untuk memenuhi kebutuhan nutrisi kucing kesayangan.">
+  <meta name="theme-color" content="#414047">
+  <title>Produk Kami | WHISKAS®</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <a class="shafia_skip-link" href="#shafia_main">Lewati ke konten</a>
+
+  <!-- HEADER -->
+  <header class="shafia_header" id="shafia_header">
+
+    <div class="shafia_utility">
+      <a href="ras-kucing.html">RAS KUCING</a>
+      <a href="fakta-kucing.html">FAKTA KUCING</a>      
+
+      <form class="whiskas-nav-search" action="search.html" method="get" role="search">
+  <input type="search" name="q" placeholder="Cari sesuatu..." aria-label="Cari sesuatu">
+</form>
+    </div>
+
+    <div class="shafia_nav-wrap">
+
+      <a href="index.html" class="whiskas-paw-logo" aria-label="Whiskas beranda">
+        <svg viewBox="0 0 220 190" role="img" aria-label="Logo Whiskas berbentuk paw">
+          <defs>
+            <linearGradient id="pawWhite" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f4f0ff"/>
+            </linearGradient>
+            <linearGradient id="pawPink" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0%" stop-color="#ffdce5"/>
+              <stop offset="100%" stop-color="#f5a6b5"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M110 178 C85 184 53 178 43 158 C25 153 17 137 22 119 C8 105 16 88 32 82 C28 65 40 49 59 48 C63 26 81 15 98 27 L110 36 L122 27 C139 15 157 26 161 48 C180 49 192 65 188 82 C204 88 212 105 198 119 C203 137 195 153 177 158 C167 178 135 184 110 178Z"
+            fill="url(#pawWhite)" stroke="#b8b6d1" stroke-width="5"/>
+
+          <ellipse cx="48" cy="78" rx="19" ry="25" transform="rotate(-20 48 78)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="86" cy="43" rx="17" ry="25" transform="rotate(-12 86 43)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="134" cy="43" rx="17" ry="25" transform="rotate(12 134 43)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="172" cy="78" rx="19" ry="25" transform="rotate(20 172 78)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+
+          <path d="M110 91 C96 91 88 108 75 119 C58 133 69 157 91 157 C101 157 107 152 110 152 C113 152 119 157 129 157 C151 157 162 133 145 119 C132 108 124 91 110 91Z"
+            fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+
+          <ellipse cx="84" cy="38" rx="6" ry="9" fill="#fff" opacity=".65"/>
+          <path d="M85 111 Q110 96 135 111" fill="none" stroke="#fff" stroke-width="4" opacity=".45"/>
+          <text x="110" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#8b527f">whiskas</text>
+        </svg>
+      </a>
+
+      <button class="shafia_menu-toggle" id="shafia_menu-toggle"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="shafia_nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="shafia_nav" id="shafia_nav" aria-label="Navigasi utama">
+        <a href="about.html" data-page="about.html">Kenapa WHISKAS®</a>
+        <a href="products.html">Produk</a>
+        <a href="nutrition.html" data-page="nutrition.html">Panduan Memberi Makan</a>
+        <a href="cat-care.html">Perawatan Kucing</a>
+        <a href="lifestyle.html" data-page="lifestyle.html">Dunia Kucing</a>
+      
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main id="shafia_main">
+
+    <!-- HERO PRODUK -->
+    <section class="shafia_page-heading">
+    <div class="shafia_container">
+      <span class="shafia_eyebrow">BERANDA / PRODUK</span>
+
+      <h1>
+        Temukan pilihan terbaik.<br>
+        <em>Untuk si manis.</em>
+      </h1>
+
+      <p>
+        Setiap kucing memiliki selera dan kebutuhan yang berbeda.
+        Jelajahi pilihan makanan WHISKAS® untuk menemani setiap
+        tahap kehidupan mereka.
+      </p>
+        </div>
+</section>
+    </section>
+
+    <!-- KATALOG PRODUK -->
+    <section class="shafia_section shafia_products-area">
+
+<div class="shafia_container">
+
+  <div class="shafia_filter-row">
+    <div class="shafia_filter-buttons" role="group" aria-label="Filter produk">
+      <button class="shafia_filter is-active" data-filter="all">Semua Produk</button>
+      <button class="shafia_filter" data-filter="dry">Makanan Kering</button>
+      <button class="shafia_filter" data-filter="wet">Makanan Basah</button>
+      <button class="shafia_filter" data-filter="kitten">Anak Kucing</button>
+    </div>
+
+    <span class="shafia_product-count" id="shafia_product-count">6 produk</span>
+  </div>
+
+  <div class="shafia_product-grid" id="shafia_product-grid">
+
+    <!-- PRODUK 1: MAKANAN KERING DEWASA -->
+    <article class="shafia_catalog-card" data-category="dry">
+      <div class="shafia_catalog-art shafia_art-lilac">
+        <span class="shafia_product-tag">MAKANAN KERING</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-dewasa1.jpg" alt="Whiskas makanan kering dewasa Ocean Fish">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Makanan Kering Dewasa</h3>
+          <p>Inspirasi pilihan makanan kering untuk kucing dewasa.</p>
+        </div>
+        <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- PRODUK 2: POUCH RASA AYAM -->
+    <article class="shafia_catalog-card" data-category="wet">
+      <div class="shafia_catalog-art shafia_art-yellow">
+        <span class="shafia_product-tag">MAKANAN BASAH</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-pouch-ayam.jpg" alt="Whiskas Pouch rasa ayam">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Pouch Rasa Ayam</h3>
+          <p>Inspirasi makanan basah dengan tekstur lembut.</p>
+        </div>
+         <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- PRODUK 3: MAKANAN ANAK KUCING -->
+    <article class="shafia_catalog-card" data-category="kitten">
+      <div class="shafia_catalog-art shafia_art-pink">
+        <span class="shafia_product-tag">ANAK KUCING</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-kitten.jpg" alt="Whiskas makanan anak kucing">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Pilihan Anak Kucing</h3>
+          <p>Inspirasi kategori makanan untuk anak kucing.</p>
+        </div>
+         <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- PRODUK 4: MAKANAN KERING RASA TUNA -->
+    <article class="shafia_catalog-card" data-category="dry">
+      <div class="shafia_catalog-art shafia_art-mint">
+        <span class="shafia_product-tag">MAKANAN KERING</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-tuna.jpg" alt="Whiskas makanan kering rasa tuna">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Makanan Kering Rasa Tuna</h3>
+          <p>Inspirasi pilihan makanan kering dengan rasa ikan tuna.</p>
+        </div>
+         <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- PRODUK 5: POUCH RASA IKAN LAUT -->
+    <article class="shafia_catalog-card" data-category="wet">
+      <div class="shafia_catalog-art shafia_art-blue">
+        <span class="shafia_product-tag">MAKANAN BASAH</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-pouch-ikan.jpg" alt="Whiskas Pouch rasa ikan laut">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Pouch Rasa Ikan Laut</h3>
+          <p>Inspirasi makanan basah dengan cita rasa ikan laut.</p>
+        </div>
+         <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+    <!-- PRODUK 6: ANAK KUCING RASA AYAM -->
+    <article class="shafia_catalog-card" data-category="kitten">
+      <div class="shafia_catalog-art shafia_art-peach">
+        <span class="shafia_product-tag">ANAK KUCING</span>
+        <div class="shafia_product-photo">
+          <img src="whiskas-kitten-ayam.jpg" alt="Whiskas makanan anak kucing rasa ayam">
+        </div>
+      </div>
+
+      <div class="shafia_catalog-info">
+        <div>
+          <h3>Anak Kucing Rasa Ayam</h3>
+          <p>Inspirasi pilihan makanan dengan rasa ayam untuk anak kucing.</p>
+        </div>
+         <a href="https://shopee.co.id/mall/search?keyword=whiskas&shop=76617760"
+          target="_blank"
+          rel="noopener noreferrer">
+          ↗
+        </a>
+      </div>
+    </article>
+
+  </div> 
+
+</div>
+
+</section>
+</main> 
+
+
+  <!-- FOOTER -->
+  <footer class="shafia_footer">
+
+    <div class="shafia_footer-top">
+
+      <div>
+        <a class="shafia_logo shafia_logo-light" href="index.html">
+          WHISKAS<span>®</span>
+        </a>
+
+        <p>
+          Momen kecil. Cinta yang besar.<br>
+          Untuk setiap kucing yang penuh rasa ingin tahu.
+        </p>
+      </div>
+
+      <div class="shafia_footer-links">
+
+        <div>
+          <strong>Jelajahi</strong>
+          <a href="about.html">Kenapa WHISKAS®</a>
+          <a href="products.html">Produk Kami</a>
+          <a href="lifestyle.html">Dunia Kucing</a>
+        </div>
+
+        <div>
+          <strong>Temukan</strong>
+          <a href="cat-care.html">Perawatan Kucing</a>
+          <a href="nutrition.html">Panduan Nutrisi</a>
+          <a href="contact.html">Kontak</a>
+        </div>
+
+      </div>
+
+      <a class="shafia_back-top" href="#shafia_header" aria-label="Kembali ke atas">
+        ↑
+      </a>
+
+    </div>
+
+    <div class="shafia_footer-bottom">
+      <span>© 2026 Konsep Website WHISKAS®</span>
+      <span>Proyek desain ulang akademik · Bukan situs web resmi merek</span>
+    </div>
+
+  </footer>
+
+</body>
+</html>

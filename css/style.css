@@ -1,0 +1,4201 @@
+
+:root{
+  --shafia-purple:#553078;--shafia-purple-deep:#352047;--shafia-purple-soft:#8d68ad;
+  --shafia-lilac:#cbb4df;--shafia-lilac-pale:#eee5f4;--shafia-warm:#e6b6c5;
+  --shafia-yellow:#f2d56b;--shafia-cream:#fbf6ef;--shafia-paper:#fffdf9;
+  --shafia-ink:#2b2430;--shafia-muted:#756d79;--shafia-line:#e8dfea;
+  --shafia-font:'DM Sans',sans-serif;--shafia-display:'Manrope',sans-serif;
+  --shafia-shadow:0 22px 60px rgba(53,32,71,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--shafia-cream);color:var(--shafia-ink);font-family:var(--shafia-font);line-height:1.65}
+img{display:block;max-width:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+.shafia_container{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+.shafia_skip-link{position:absolute;left:-999px;top:10px;background:white;padding:10px;z-index:999}
+.shafia_skip-link:focus{left:10px}
+.shafia_header{position:sticky;top:0;z-index:100;background:rgba(251,246,239,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(85,48,120,.09)}
+.shafia_nav-wrap{height:82px;width:min(1320px,calc(100% - 64px));margin:auto;display:flex;align-items:center;justify-content:space-between}
+.shafia_logo{font:800 27px var(--shafia-display);letter-spacing:-2px;color:var(--shafia-purple);line-height:1}
+.shafia_logo span{font-size:10px;vertical-align:top;letter-spacing:0;margin-left:2px}
+.shafia_nav{display:flex;align-items:center;gap:30px}
+.shafia_nav>a{font-size:12px;font-weight:700;color:#5c5262;transition:.25s}
+.shafia_nav>a:hover,.shafia_nav>a.is-current{color:var(--shafia-purple)}
+.shafia_nav-contact{padding:12px 18px;border:1px solid #cbb9d7;border-radius:99px}
+.shafia_nav-contact span{margin-left:9px}
+.shafia_menu-toggle{display:none;border:0;background:none;width:42px;height:42px;padding:10px}
+.shafia_menu-toggle span{display:block;height:2px;background:var(--shafia-purple);margin:6px 0}
+.shafia_eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--shafia-purple);font-size:10px;font-weight:800;letter-spacing:2px}
+.shafia_eyebrow-light{color:#e8d9f3}
+.shafia_eyebrow i{width:7px;height:7px;background:var(--shafia-yellow);border-radius:50%}
+h1,h2,h3,p{margin-top:0}
+h1,h2{font-family:var(--shafia-display);letter-spacing:-.055em;line-height:1.04}
+h1{font-size:clamp(52px,7.4vw,100px);font-weight:800}
+h2{font-size:clamp(36px,5vw,62px);font-weight:800}
+h1 em,h2 em,blockquote em{font-style:normal;color:var(--shafia-yellow)}
+.shafia_btn{display:inline-flex;align-items:center;justify-content:center;gap:24px;padding:15px 21px;border-radius:999px;font-size:12px;font-weight:800;transition:transform .25s,box-shadow .25s}
+.shafia_btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.13)}
+.shafia_btn span{font-size:17px}
+.shafia_btn-yellow{background:var(--shafia-yellow);color:var(--shafia-purple-deep)}
+.shafia_btn-purple{background:var(--shafia-purple);color:white}
+.shafia_btn-outline-light{border:1px solid rgba(255,255,255,.55);color:white}
+.shafia_text-link{display:inline-flex;align-items:center;gap:16px;color:var(--shafia-purple);font-size:12px;font-weight:800}
+.shafia_text-link span{font-size:19px;transition:transform .2s}
+.shafia_text-link:hover span{transform:translateX(5px)}
+.shafia_text-link-light{color:white}
+.shafia_section{padding-top:108px;padding-bottom:108px}
+.shafia_hero{min-height:650px;background:var(--shafia-purple);color:white;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px max(7vw,calc((100vw - 1160px)/2));gap:40px}
+.shafia_hero-copy{position:relative;z-index:2;max-width:590px}
+.shafia_hero h1{margin:22px 0;font-size:clamp(58px,7vw,96px)}
+.shafia_hero h1 em{color:var(--shafia-yellow)}
+.shafia_hero-copy>p{max-width:420px;color:#e4d8ed;font-size:15px;line-height:1.8}
+.shafia_hero-actions{display:flex;align-items:center;gap:26px;margin-top:30px;flex-wrap:wrap}
+.shafia_hero-note{font-size:10px;color:#d7c9e2;margin-top:62px;letter-spacing:.5px}
+.shafia_note-dot{display:inline-block;width:7px;height:7px;background:var(--shafia-yellow);border-radius:50%;margin-right:8px}
+.shafia_hero-art{position:relative;min-height:480px;display:grid;place-items:center}
+.shafia_hero-art>img{position:relative;z-index:1;width:min(440px,90%);height:450px;border-radius:48% 48% 42% 42%;object-fit:cover;box-shadow:0 25px 70px rgba(22,10,34,.28)}
+.shafia_hero-orbit{position:absolute;border:1px solid rgba(255,255,255,.23);border-radius:50%;width:520px;height:520px}
+.shafia_orbit-two{width:590px;height:590px;border-color:rgba(242,213,107,.28)}
+.shafia_sticker{position:absolute;z-index:2;right:4%;top:8%;width:95px;height:95px;background:var(--shafia-yellow);color:var(--shafia-purple);border-radius:50%;display:grid;place-content:center;text-align:center;font:800 17px/1.1 var(--shafia-display);transform:rotate(12deg)}
+.shafia_hero-caption{position:absolute;z-index:2;bottom:2%;right:2%;font-size:10px;letter-spacing:1px;color:#e6d9ef}
+.shafia_hero-index{position:absolute;right:34px;bottom:28px;font:700 12px var(--shafia-display);letter-spacing:2px}
+.shafia_hero-index span{color:var(--shafia-yellow);padding:0 5px}
+.shafia_intro{display:grid;grid-template-columns:.6fr 1.5fr .4fr;gap:35px;align-items:center}
+.shafia_intro-label{display:flex;align-items:center;gap:18px;align-self:stretch}
+.shafia_vertical-line{height:100%;width:1px;background:#ff9cce}
+.shafia_intro-content h2{max-width:750px;margin:15px 0 24px}
+.shafia_intro-content h2 em{color:var(--shafia-purple-soft)}
+.shafia_intro-content p{max-width:590px;color:var(--shafia-muted);font-size:14px;line-height:1.9;margin-bottom:25px}
+.shafia_intro-mark{font:800 100px var(--shafia-display);color:#e9dfee;text-align:center}
+.shafia_intro-mark span{color:var(--shafia-warm)}
+.shafia_feature-band{display:grid;grid-template-columns:1fr 1fr;background:#352047;color:white;min-height:470px}
+.shafia_feature-image img{width:100%;height:100%;min-height:470px}
+.shafia_feature-copy{padding:75px clamp(35px,7vw,110px);align-self:center}
+.shafia_feature-copy h2{margin:20px 0;color:white}
+.shafia_feature-copy h2 em{color:var(--shafia-warm)}
+.shafia_feature-copy p{color:#d8cbdc;max-width:390px;font-size:14px;line-height:1.8;margin-bottom:28px}
+.shafia_section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+.shafia_section-heading h2{margin:14px 0 0}
+.shafia_section-heading h2 em{color:var(--shafia-purple-soft)}
+.shafia_section-heading>p{max-width:370px;color:var(--shafia-muted);font-size:13px}
+.shafia_product-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.shafia_product-tile{padding:22px;border-radius:8px;min-height:390px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.shafia_product-tile-lilac{background:#e8d9f0}.shafia_product-tile-yellow{background:#f5e7a8}.shafia_product-tile-cream{background:#f0dce1}
+.shafia_product-tag{font-size:9px;letter-spacing:1.6px;font-weight:800;color:var(--shafia-purple)}
+.shafia_pack{width:155px;height:205px;margin:15px auto 20px;border-radius:13px 13px 22px 22px;background:linear-gradient(140deg,#7951a0,#42215f);box-shadow:13px 17px 25px rgba(50,28,65,.22);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;transform:rotate(-3deg);border:3px solid rgba(255,255,255,.45)}
+.shafia_pack:before{content:"";position:absolute;top:-7px;left:10px;right:10px;height:12px;border-radius:5px;background:#4a2869}
+.shafia_pack>span{font:800 18px var(--shafia-display);letter-spacing:-1px}
+.shafia_pack>b{font:800 25px var(--shafia-display);margin-top:10px}
+.shafia_pack>small{font-size:10px;margin-top:5px}
+.shafia_pack>i{position:absolute;bottom:13px;right:14px;font-style:normal;font-size:20px;color:var(--shafia-yellow)}
+.shafia_pack-plum{background:linear-gradient(140deg,#5a245e,#31143e);transform:rotate(3deg)}
+.shafia_pack-pink{background:linear-gradient(140deg,#d18b9e,#8c466d);transform:rotate(-2deg)}
+.shafia_pack-orange{background:linear-gradient(140deg,#c66d42,#793b39)}
+.shafia_product-tile h3{font:800 19px var(--shafia-display);margin:0 0 5px}
+.shafia_product-tile p{font-size:11px;color:#65596a;margin:0}
+.shafia_disclaimer{font-size:10px;color:#8a7f8d;line-height:1.6;margin-top:20px}
+.shafia_care-cta{background:var(--shafia-lilac-pale);min-height:430px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.shafia_care-cta-copy{padding:75px max(6vw,calc((100vw - 1160px)/2));padding-right:35px;align-self:center}
+.shafia_care-cta h2{margin:18px 0;color:var(--shafia-purple)}
+.shafia_care-cta h2 em{color:#ad779c}
+.shafia_care-cta p{font-size:13px;color:#695c70;max-width:350px}
+.shafia_care-cta>img{height:100%;min-height:430px;width:100%}
+.shafia_cta-scribble{position:absolute;right:43%;bottom:8%;font:italic 800 45px var(--shafia-display);color:var(--shafia-purple);transform:rotate(-12deg)}
+.shafia_quote-section{text-align:center;padding-block:100px}
+.shafia_quote-mark{font:100px Georgia;color:var(--shafia-warm);line-height:.7}
+.shafia_quote-section blockquote{font:800 clamp(36px,5vw,64px)/1.1 var(--shafia-display);letter-spacing:-3px;margin:15px 0 25px}
+.shafia_quote-section blockquote em{color:var(--shafia-purple-soft)}
+.shafia_quote-section .shafia_eyebrow{justify-content:center}
+.shafia_footer{background:var(--shafia-purple-deep);color:white;padding:65px max(5vw,calc((100vw - 1160px)/2)) 22px}
+.shafia_footer-top{display:grid;grid-template-columns:1.2fr 1fr auto;gap:40px;align-items:start;padding-bottom:55px}
+.shafia_logo-light{color:white;font-size:30px}
+.shafia_footer-top p{font-size:12px;color:#cbbbd6;line-height:1.8;margin-top:18px}
+.shafia_footer-links{display:flex;gap:75px}
+.shafia_footer-links div{display:flex;flex-direction:column;gap:11px}
+.shafia_footer-links strong{font-size:11px;color:var(--shafia-yellow);margin-bottom:5px}
+.shafia_footer-links a{font-size:11px;color:#ded3e5}
+.shafia_footer-links a:hover{color:var(--shafia-yellow)}
+.shafia_back-top{width:43px;height:43px;border:1px solid #806a91;border-radius:50%;display:grid;place-items:center;font-size:20px}
+.shafia_footer-bottom{border-top:1px solid #59456b;padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:#b9a9c5;font-size:9px;letter-spacing:.4px}
+.shafia_page-hero{min-height:480px;padding:80px max(7vw,calc((100vw - 1160px)/2));display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;position:relative;overflow:hidden}
+.shafia_page-hero-purple{background:var(--shafia-purple);color:white}
+.shafia_page-hero h1{font-size:clamp(52px,6.5vw,82px);margin:20px 0}
+.shafia_page-hero h1 em{color:var(--shafia-warm)}
+.shafia_page-hero p{max-width:430px;color:#e1d6e8;font-size:14px;line-height:1.8}
+.shafia_page-hero img{height:330px;width:100%;border-radius:48% 48% 8px 8px;position:relative;z-index:1}
+.shafia_page-hero-shape{position:absolute;width:500px;height:500px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:8%;bottom:-60%}
+.shafia_story-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.shafia_story-grid h2{margin-top:18px}
+.shafia_story-grid h2 em,.shafia_split h2 em{color:var(--shafia-purple-soft)}
+.shafia_story-grid p,.shafia_split p{font-size:14px;color:var(--shafia-muted);line-height:1.9}
+.shafia_values{background:var(--shafia-purple-deep);color:white;padding:95px 0}
+.shafia_values h2{margin:18px 0 45px}
+.shafia_values h2 em{color:var(--shafia-warm)}
+.shafia_value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.shafia_value-grid article{border-top:1px solid #765e87;padding-top:20px}
+.shafia_value-grid article>span{color:var(--shafia-yellow);font-size:11px;font-weight:800}
+.shafia_value-grid h3{font:800 23px var(--shafia-display);margin:25px 0 8px}
+.shafia_value-grid p{font-size:12px;color:#cbbdd4;max-width:260px}
+.shafia_split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.shafia_split img{width:100%;height:430px;border-radius:5px 120px 5px 5px}
+.shafia_split h2{margin:18px 0}
+.shafia_page-heading{padding-top:100px;padding-bottom:40px}
+.shafia_page-heading h1{font-size:clamp(55px,7vw,90px);margin:18px 0}
+.shafia_page-heading h1 em{color:var(--shafia-purple-soft)}
+.shafia_page-heading p{max-width:520px;color:var(--shafia-muted);font-size:14px;line-height:1.8}
+.shafia_products-area{padding-top:25px}
+.shafia_filter-row{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:25px}
+.shafia_filter-buttons{display:flex;gap:8px;flex-wrap:wrap}
+.shafia_filter{border:1px solid #d9ccdf;background:transparent;border-radius:99px;padding:10px 17px;color:#685d6e;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}
+.shafia_filter:hover,.shafia_filter.is-active{background:var(--shafia-purple);border-color:var(--shafia-purple);color:white}
+.shafia_product-count{font-size:10px;color:var(--shafia-muted);white-space:nowrap}
+.shafia_product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.shafia_catalog-card{min-width:0}
+.shafia_catalog-card.is-hidden{display:none}
+.shafia_catalog-art{height:310px;border-radius:7px;display:flex;flex-direction:column;justify-content:space-between;padding:20px;overflow:hidden}
+.shafia_art-lilac{background:#e8d9f0}.shafia_art-yellow{background:#f5e7a8}.shafia_art-pink{background:#f0dce1}.shafia_art-cream{background:#eee7d8}
+.shafia_catalog-art .shafia_pack{margin:auto}
+.shafia_catalog-info{display:flex;justify-content:space-between;align-items:center;padding:15px 2px}
+.shafia_catalog-info h3{font:800 17px var(--shafia-display);margin:0 0 5px}
+.shafia_catalog-info p{font-size:10px;color:var(--shafia-muted);margin:0;max-width:260px}
+.shafia_catalog-info>a{width:36px;height:36px;border-radius:50%;background:var(--shafia-purple);color:white;display:grid;place-items:center;flex-shrink:0}
+.shafia_breadcrumb{padding-top:30px;display:flex;gap:10px;font-size:10px;color:#8c8190}
+.shafia_breadcrumb a:hover{color:var(--shafia-purple)}
+.shafia_detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;padding-top:55px}
+.shafia_detail-visual{height:510px;background:#e9ddf0;display:grid;place-items:center;position:relative;overflow:hidden}
+.shafia_detail-visual:before,.shafia_detail-visual:after{content:"";position:absolute;border:1px solid rgba(85,48,120,.2);border-radius:50%;width:440px;height:440px}
+.shafia_detail-visual:after{width:350px;height:350px}
+.shafia_pack-large{z-index:1;width:220px;height:310px;transform:rotate(-5deg)}
+.shafia_pack-large>span{font-size:25px}.shafia_pack-large>b{font-size:36px}
+.shafia_detail-bubble{position:absolute;z-index:2;top:50px;right:45px;width:88px;height:88px;background:var(--shafia-yellow);border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--shafia-purple);font:800 13px/1.1 var(--shafia-display);transform:rotate(12deg)}
+.shafia_detail-caption{position:absolute;bottom:20px;left:22px;font-size:9px;letter-spacing:2px;color:var(--shafia-purple)}
+.shafia_detail-copy h1{font-size:clamp(58px,6vw,80px);margin:18px 0}
+.shafia_detail-copy h1 em{color:var(--shafia-purple-soft)}
+.shafia_detail-lead{font-size:14px;color:var(--shafia-muted);max-width:430px}
+.shafia_detail-meta{border-top:1px solid var(--shafia-line);border-bottom:1px solid var(--shafia-line);margin:30px 0;padding:18px 0;display:grid;gap:15px}
+.shafia_detail-meta div{display:flex;justify-content:space-between;gap:20px;font-size:11px}
+.shafia_detail-meta span{color:#95899a;font-size:9px;letter-spacing:1px}
+.shafia_detail-meta strong{font-weight:700}
+.shafia_detail-bottom,.shafia_lifestyle-note{background:var(--shafia-purple-deep);color:white;padding:75px 0}
+.shafia_detail-bottom h2,.shafia_lifestyle-note h2{margin:17px 0 25px}
+.shafia_detail-bottom h2 em,.shafia_lifestyle-note h2 em{color:var(--shafia-warm)}
+.shafia_gallery-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:245px;gap:16px}
+.shafia_gallery-card{margin:0;position:relative;overflow:hidden;background:#e4d6eb;border-radius:5px}
+.shafia_gallery-card img{width:100%;height:100%;transition:transform .6s}
+.shafia_gallery-card:hover img{transform:scale(1.06)}
+.shafia_gallery-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(25,14,34,.75))}
+.shafia_gallery-card figcaption{position:absolute;z-index:1;bottom:18px;left:20px;color:white;display:flex;flex-direction:column;gap:3px}
+.shafia_gallery-card figcaption span{font-size:8px;letter-spacing:1.6px}
+.shafia_gallery-card figcaption strong{font:700 17px var(--shafia-display)}
+.shafia_gallery-tall{grid-row:span 2}
+.shafia_gallery-wide{grid-column:span 2}
+.shafia_lifestyle-note h2{max-width:700px}
+.shafia_care-layout{padding-top:35px;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start}
+.shafia_care-feature{background:var(--shafia-purple);color:white}
+.shafia_care-feature img{width:100%;height:300px}
+.shafia_care-feature>div{padding:30px}
+.shafia_care-feature h2{font-size:38px;margin:15px 0}
+.shafia_care-feature h2 em{color:var(--shafia-warm)}
+.shafia_care-feature p{font-size:12px;color:#e0d3e8}
+.shafia_care-list article{display:grid;grid-template-columns:35px 1fr 20px;gap:15px;padding:20px 0;border-bottom:1px solid var(--shafia-line)}
+.shafia_care-list article>span{font-size:10px;color:var(--shafia-purple-soft);font-weight:800}
+.shafia_care-list h3{font:800 17px var(--shafia-display);margin:0 0 5px}
+.shafia_care-list p{font-size:11px;color:var(--shafia-muted);margin:0;line-height:1.7}
+.shafia_care-list b{color:var(--shafia-purple)}
+.shafia_faq-section{background:var(--shafia-purple-deep);color:white;padding:85px 0}
+.shafia_faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px}
+.shafia_faq-grid h2{margin:17px 0}
+.shafia_faq-grid h2 em{color:var(--shafia-warm)}
+.shafia_faq-grid>div:first-child p{font-size:12px;color:#cbbbd6}
+.shafia_faq-list details{border-bottom:1px solid #655171;padding:19px 0}
+.shafia_faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font:700 14px var(--shafia-display)}
+.shafia_faq-list summary::-webkit-details-marker{display:none}
+.shafia_faq-list summary span{color:var(--shafia-yellow);font-size:20px;transition:transform .2s}
+.shafia_faq-list details[open] summary span{transform:rotate(45deg)}
+.shafia_faq-list details p{font-size:12px;color:#cbbbd6;max-width:570px;margin:14px 0 0}
+.shafia_nutrition-hero{background:var(--shafia-purple);color:white;min-height:470px;padding:100px 0;position:relative;overflow:hidden}
+.shafia_nutrition-hero .shafia_container{position:relative;z-index:1}
+.shafia_nutrition-hero h1{font-size:clamp(60px,8vw,100px);margin:20px 0}
+.shafia_nutrition-hero h1 em{color:var(--shafia-yellow)}
+.shafia_nutrition-hero p{max-width:460px;color:#e1d6e8;font-size:14px;margin-bottom:28px}
+.shafia_nutrition-sun{position:absolute;width:480px;height:480px;border-radius:50%;background:var(--shafia-warm);right:10%;top:0;opacity:.18}
+.shafia_stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.shafia_stage-grid article{background:#eee5f4;padding:28px;min-height:270px;position:relative}
+.shafia_stage-grid article:nth-child(2){background:#f5e9ad}
+.shafia_stage-grid article:nth-child(3){background:#f0dce1}
+.shafia_stage-number{position:absolute;top:20px;right:22px;font-size:10px;font-weight:800;color:#95869d}
+.shafia_stage-icon{font-size:30px;color:var(--shafia-purple)}
+.shafia_stage-grid h3{font:800 24px var(--shafia-display);margin:22px 0 8px}
+.shafia_stage-grid p{font-size:12px;color:#6f6472;line-height:1.8}
+.shafia_feed-band{background:var(--shafia-purple-deep);color:white;padding:75px 0}
+.shafia_feed-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.shafia_feed-grid img{width:100%;height:360px;border-radius:5px 100px 5px 5px}
+.shafia_feed-grid h2{margin:17px 0 25px}
+.shafia_feed-grid ul{padding-left:18px;color:#d7c9df;font-size:12px;line-height:2.2}
+.shafia_notice{max-width:850px}
+.shafia_notice h2{margin:18px 0}
+.shafia_notice h2 em{color:var(--shafia-purple-soft)}
+.shafia_notice p{color:var(--shafia-muted);font-size:13px;line-height:1.9}
+.shafia_contact-hero{background:var(--shafia-purple);color:white;padding:75px 0 90px;position:relative;overflow:hidden}
+.shafia_contact-hero h1{font-size:clamp(58px,8vw,100px);margin:20px 0}
+.shafia_contact-hero h1 em{color:var(--shafia-yellow)}
+.shafia_contact-hero p{max-width:440px;color:#e2d5ea;font-size:14px}
+.shafia_contact-star{position:absolute;right:12%;top:30%;font-size:140px;color:var(--shafia-warm);opacity:.8}
+.shafia_contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px}
+.shafia_contact-info h2{margin:18px 0}
+.shafia_contact-info h2 em{color:var(--shafia-purple-soft)}
+.shafia_contact-info>p{color:var(--shafia-muted);font-size:13px}
+.shafia_contact-detail{border-top:1px solid var(--shafia-line);padding:15px 0;display:flex;flex-direction:column;gap:4px}
+.shafia_contact-detail span{font-size:9px;letter-spacing:1.5px;color:#9b8ea0}
+.shafia_contact-detail strong{font-size:12px}
+.shafia_contact-cat{font-size:34px;color:var(--shafia-purple-soft);margin-top:25px}
+.shafia_contact-form{background:var(--shafia-paper);padding:35px;box-shadow:var(--shafia-shadow)}
+.shafia_form-row{margin-bottom:19px}
+.shafia_form-row label{display:block;font-size:11px;font-weight:800;margin-bottom:8px}
+.shafia_form-row input,.shafia_form-row textarea,.shafia_form-row select{width:100%;border:1px solid #e4dbe7;background:#fffdfb;border-radius:4px;padding:13px 14px;color:var(--shafia-ink);font-size:12px;outline:none;transition:border .2s}
+.shafia_form-row input:focus,.shafia_form-row textarea:focus,.shafia_form-row select:focus{border-color:var(--shafia-purple)}
+.shafia_form-row textarea{resize:vertical}
+.shafia_error{display:block;min-height:15px;color:#b34b63;font-size:10px;margin-top:4px}
+.shafia_submit{border:0;cursor:pointer}
+.shafia_form-status{font-size:12px;margin:13px 0 0;color:var(--shafia-purple);font-weight:700}
+@media(max-width:900px){
+ .shafia_nav-wrap{width:calc(100% - 40px);height:72px}
+ .shafia_menu-toggle{display:block;cursor:pointer}
+ .shafia_nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--shafia-cream);padding:22px 25px 28px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--shafia-line);box-shadow:var(--shafia-shadow)}
+ .shafia_nav.is-open{display:flex}
+ .shafia_nav>a{padding:12px 4px}
+ .shafia_nav-contact{margin-top:8px;text-align:center}
+ .shafia_hero{grid-template-columns:1fr;padding:65px 8% 75px;gap:10px}
+ .shafia_hero-copy{max-width:650px}
+ .shafia_hero-art{min-height:390px}
+ .shafia_hero-art>img{height:350px;width:min(370px,80%)}
+ .shafia_hero-orbit{width:410px;height:410px}
+ .shafia_orbit-two{width:470px;height:470px}
+ .shafia_intro{grid-template-columns:.3fr 1.7fr}
+ .shafia_intro-mark{display:none}
+ .shafia_feature-copy{padding:55px 35px}
+ .shafia_product-preview{gap:12px}
+ .shafia_product-tile{padding:16px;min-height:360px}
+ .shafia_pack{width:130px;height:180px}
+ .shafia_page-hero{padding:65px 7%;gap:25px}
+ .shafia_detail-grid{gap:40px}
+ .shafia_contact-grid{gap:45px}
+ .shafia_faq-grid{gap:45px}
+}
+@media(max-width:640px){
+ .shafia_container{width:calc(100% - 40px)}
+ .shafia_section{padding-top:72px;padding-bottom:72px}
+ .shafia_hero{min-height:auto;padding:55px 22px 65px}
+ .shafia_hero h1{font-size:57px}
+ .shafia_hero-copy>p{font-size:13px}
+ .shafia_hero-actions{gap:18px}
+ .shafia_hero-note{margin-top:35px}
+ .shafia_hero-art{min-height:320px}
+ .shafia_hero-art>img{height:290px;width:75%}
+ .shafia_hero-orbit{width:320px;height:320px}
+ .shafia_orbit-two{width:360px;height:360px}
+ .shafia_sticker{width:75px;height:75px;font-size:14px;right:4%;top:3%}
+ .shafia_hero-caption{right:0;font-size:8px}
+ .shafia_intro{grid-template-columns:1fr;gap:15px}
+ .shafia_intro-label{height:auto}
+ .shafia_vertical-line{display:none}
+ .shafia_intro-content h2{font-size:40px}
+ .shafia_feature-band{grid-template-columns:1fr}
+ .shafia_feature-image img{min-height:280px;height:280px}
+ .shafia_feature-copy{padding:55px 25px}
+ .shafia_section-heading{align-items:flex-start;flex-direction:column;gap:15px}
+ .shafia_product-preview{grid-template-columns:1fr}
+ .shafia_product-tile{min-height:330px}
+ .shafia_product-tile .shafia_pack{width:145px;height:185px}
+ .shafia_care-cta{grid-template-columns:1fr}
+ .shafia_care-cta-copy{padding:60px 25px}
+ .shafia_care-cta>img{min-height:280px;height:280px}
+ .shafia_cta-scribble{right:8%;bottom:22%}
+ .shafia_footer{padding:50px 22px 20px}
+ .shafia_footer-top{grid-template-columns:1fr auto;gap:28px}
+ .shafia_footer-links{grid-column:1/-1;gap:45px}
+ .shafia_footer-bottom{flex-direction:column;gap:7px}
+ .shafia_page-hero{grid-template-columns:1fr;padding:55px 22px;gap:25px}
+ .shafia_page-hero h1{font-size:55px}
+ .shafia_page-hero img{height:260px;width:100%}
+ .shafia_story-grid,.shafia_split{grid-template-columns:1fr;gap:25px}
+ .shafia_story-grid h2{font-size:40px}
+ .shafia_values{padding:70px 0}
+ .shafia_value-grid{grid-template-columns:1fr;gap:25px}
+ .shafia_value-grid article{padding-top:15px}
+ .shafia_value-grid h3{margin:12px 0 5px}
+ .shafia_split img{height:300px}
+ .shafia_page-heading{padding-top:70px;padding-bottom:25px}
+ .shafia_page-heading h1{font-size:58px}
+ .shafia_filter-row{align-items:flex-start;flex-direction:column}
+ .shafia_product-grid{grid-template-columns:1fr 1fr;gap:18px 12px}
+ .shafia_catalog-art{height:225px;padding:13px}
+ .shafia_catalog-art .shafia_pack{width:105px;height:150px}
+ .shafia_pack>span{font-size:14px}
+ .shafia_pack>b{font-size:20px}
+ .shafia_pack>small{font-size:8px}
+ .shafia_catalog-info h3{font-size:13px}
+ .shafia_catalog-info p{font-size:9px}
+ .shafia_catalog-info>a{width:30px;height:30px}
+ .shafia_detail-grid{grid-template-columns:1fr;gap:35px;padding-top:30px}
+ .shafia_detail-visual{height:390px}
+ .shafia_pack-large{width:175px;height:250px}
+ .shafia_detail-copy h1{font-size:60px}
+ .shafia_gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:190px;gap:10px}
+ .shafia_gallery-tall{grid-row:span 2}
+ .shafia_gallery-wide{grid-column:span 2}
+ .shafia_gallery-card figcaption{left:12px;bottom:12px}
+ .shafia_gallery-card figcaption strong{font-size:13px}
+ .shafia_gallery-card figcaption span{font-size:7px}
+ .shafia_care-layout{grid-template-columns:1fr;gap:30px;padding-top:25px}
+ .shafia_care-feature img{height:240px}
+ .shafia_care-feature>div{padding:23px}
+ .shafia_care-feature h2{font-size:32px}
+ .shafia_faq-section{padding:65px 0}
+ .shafia_faq-grid{grid-template-columns:1fr;gap:25px}
+ .shafia_nutrition-hero{padding:75px 0}
+ .shafia_nutrition-hero h1{font-size:65px}
+ .shafia_stage-grid{grid-template-columns:1fr}
+ .shafia_stage-grid article{min-height:220px}
+ .shafia_feed-band{padding:60px 0}
+ .shafia_feed-grid{grid-template-columns:1fr;gap:30px}
+ .shafia_feed-grid img{height:270px}
+ .shafia_notice h2{font-size:39px}
+ .shafia_contact-hero{padding:65px 0}
+ .shafia_contact-star{font-size:75px;right:5%;top:10%}
+ .shafia_contact-grid{grid-template-columns:1fr;gap:30px}
+ .shafia_contact-form{padding:23px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* WHISKAS HOMEPAGE — inspired by the supplied official-site reference */
+.shafia_header{background:#79006f;border:0;color:#fff;backdrop-filter:none}
+.shafia_utility{height:30px;width:min(1080px,calc(100% - 48px));margin:auto;display:flex;justify-content:flex-end;align-items:center;gap:28px}
+.shafia_utility a{font-size:9px;font-weight:800;letter-spacing:1.2px;color:#fff}
+.shafia_nav-wrap{height:100px;width:min(1080px,calc(100% - 48px));justify-content:space-between}
+.shafia_logo{color:#fff;font-size:27px;letter-spacing:-2px;text-shadow:0 4px 15px rgba(255,255,255,.3)}
+.shafia_nav{gap:27px}
+.shafia_nav>a{font-size:12px;letter-spacing:.7px;color:#fff;font-weight:600;white-space:nowrap}
+.shafia_nav>a:hover,.shafia_nav>a.is-current{color:#ffd9f6}
+.shafia_nav-contact{border:0;padding:0}
+.shafia_nav-contact span{display:none}
+.shafia_menu-toggle span{background:#fff}
+.nav-chevron{font-size:15px;margin-left:4px}
+.whiskas-banner{min-height:480px;height: min(480px, calc(100vh - 130px));padding:38px max(7vw,calc((100vw - 1080px)/2));grid-template-columns:.82fr 1.18fr;gap:18px;background:radial-gradient(ellipse at 56% 50%,#d72b9d 0%,#b10a88 43%,#830078 100%);}
+.whiskas-banner:before{content:"";position:absolute;inset:0;opacity:.22;background:repeating-linear-gradient(155deg,transparent 0 8px,rgba(45,0,48,.35) 9px 11px,transparent 13px 20px),repeating-linear-gradient(25deg,transparent 0 22px,rgba(255,190,240,.14) 23px 25px,transparent 28px 40px);mix-blend-mode:soft-light;pointer-events:none}
+.whiskas-banner-copy{position:relative;z-index:3;align-self:center;max-width:440px}
+.whiskas-banner-logo{font:800 clamp(36px,4vw,54px)/1 var(--shafia-display);letter-spacing:-4px;color:#fff;margin:0 0 38px;text-shadow:0 5px 15px rgba(63,0,55,.3)}
+.whiskas-banner-logo sup{font-size:12px;letter-spacing:0;vertical-align:top;margin-left:3px}
+.whiskas-banner h1{font-size:clamp(31px,3.1vw,46px);letter-spacing:-1.8px;line-height:1.25;margin:0 0 17px;text-shadow:0 3px 8px rgba(55,0,55,.22)}
+.whiskas-banner h1 span{display:inline-block;background:#fff;color:#a20b83;border-radius:18px;padding:7px 17px 9px;font-style:italic}
+.whiskas-banner-copy>p{max-width:360px;color:#ffe8fa;font-size:12px;line-height:1.65;text-shadow:0 2px 6px rgba(55,0,55,.3)}
+.whiskas-banner-link{display:inline-flex;align-items:center;gap:18px;margin-top:10px;padding:12px 18px;border-radius:99px;background:#f6d5ec;color:#870078;font-size:9px;font-weight:900;letter-spacing:1px;box-shadow:0 5px 0 rgba(73,0,68,.2)}
+.whiskas-banner-link b{font-size:15px}
+.whiskas-banner-cat{position:relative;z-index:2;min-height:360px;align-self:center;display:flex;align-items:center;justify-content:center}
+.whiskas-banner-cat>img{width:min(430px,72%);height:360px;object-fit:cover;object-position:center;border-radius:48% 48% 45% 45%;filter:drop-shadow(0 16px 18px rgba(48,0,48,.3));mix-blend-mode:normal;border:5px solid rgba(255,255,255,.14)}
+.whiskas-food-bowl{position:absolute;left:3%;top:39%;width:92px;height:92px;border-radius:50%;background:linear-gradient(145deg,#ffcf68,#c52291);border:5px solid #f4c2df;box-shadow:0 7px 15px #4c004d66;display:grid;align-content:center;text-align:center;color:#fff;font-size:12px;line-height:1.05;transform:rotate(-8deg)}
+.whiskas-food-bowl strong{font-size:11px}
+.whiskas-nutrition-card{position:absolute;right:0;width:205px;min-height:58px;padding:9px 13px;border:2px solid #f7c65f;border-radius:13px;background:linear-gradient(110deg,#9a087e,#d82c9b);color:#fff;box-shadow:0 5px 12px #4a004b66;display:grid;grid-template-columns:1fr auto;align-items:center;line-height:1.05;transform:rotate(-3deg)}
+.whiskas-nutrition-card b{font:800 13px var(--shafia-display)}
+.whiskas-nutrition-card strong{font:800 25px var(--shafia-display)}
+.whiskas-nutrition-card small{grid-column:1/-1;text-align:right;font-size:8px;font-style:italic}
+.card-zinc{top:8%}.card-vitamin{top:37%;right:-2%;transform:rotate(2deg)}.card-calcium{top:66%;right:0;transform:rotate(-2deg)}
+.whiskas-banner-footnote{position:absolute;z-index:2;bottom:17px;left:50%;transform:translateX(-50%);width:min(700px,80%);margin:0;text-align:center;color:#f8dff1;font-size:9px;line-height:1.5;font-style:italic;text-shadow:0 2px 5px #4a004b}
+@media(max-width:900px){
+ .shafia_utility{width:calc(100% - 40px);gap:15px}
+ .shafia_nav-wrap{height:76px}
+ .shafia_nav{display:none;top:106px;background:#79006f;padding:18px 25px 25px}
+ .shafia_nav.is-open{display:flex}
+ .whiskas-banner{height:auto;min-height:650px;grid-template-columns:1fr;padding:42px 7% 65px;gap:0}
+ .whiskas-banner-copy{max-width:620px;text-align:center;margin:auto}
+ .whiskas-banner-logo{margin-bottom:20px}
+ .whiskas-banner-copy>p{margin-inline:auto}
+ .whiskas-banner-cat{width:min(600px,100%);margin:auto;min-height:340px}
+ .whiskas-banner-cat>img{height:310px;width:55%}
+ .whiskas-food-bowl{left:13%;top:40%}
+ .whiskas-nutrition-card{right:7%}
+ .card-vitamin{right:5%}
+ .card-calcium{right:7%}
+}
+@media(max-width:640px){
+ .shafia_utility{height:27px;gap:11px;width:calc(100% - 28px)}
+ .shafia_utility a{font-size:7px;letter-spacing:.6px}
+ .shafia_nav-wrap{width:calc(100% - 32px);height:67px}
+ .shafia_logo{font-size:25px}
+ .shafia_nav{top:94px}
+ .whiskas-banner{min-height:690px;padding:38px 18px 76px}
+ .whiskas-banner h1{font-size:31px}
+ .whiskas-banner-logo{font-size:42px}
+ .whiskas-banner-cat{min-height:330px;margin-top:4px}
+ .whiskas-banner-cat>img{width:68%;height:270px}
+ .whiskas-food-bowl{width:72px;height:72px;left:0;top:43%;font-size:10px}
+ .whiskas-nutrition-card{width:145px;min-height:48px;padding:7px 9px;right:-2%;}
+ .whiskas-nutrition-card b{font-size:10px}
+ .whiskas-nutrition-card strong{font-size:20px}
+ .whiskas-nutrition-card small{font-size:7px}
+ .card-zinc{top:5%}.card-vitamin{top:38%;right:-3%}.card-calcium{top:70%;right:-1%}
+ .whiskas-banner-footnote{width:90%;font-size:8px;bottom:14px}
+}
+
+
+.whiskas-paw-logo {
+  display: inline-flex;
+  width: 105px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  filter: drop-shadow(0 3px 5px rgba(180, 130, 190, .2));
+  transition: transform .3s ease;
+}
+
+.whiskas-paw-logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.whiskas-paw-logo:hover {
+  transform: scale(1.07) rotate(-3deg);
+  filter: drop-shadow(0 0 8px rgba(239, 166, 210, .7));
+}
+
+/* Menggeser logo navigasi sedikit ke atas */
+.shafia_nav-wrap .shafia_logo,
+.shafia_nav-wrap .whiskas-paw-logo{
+  position:relative;
+  top:-20px;
+}
+
+
+/* NAVBAR — DARK GREY */
+.shafia_header{
+  background:#414047;
+  border-bottom:1px solid #55525A;
+}
+
+/* Logo Whiskas */
+.shafia_nav-wrap .shafia_logo{
+  color:#FFFFFF;
+}
+
+/* Tulisan menu */
+.shafia_nav>a,
+.shafia_utility a{
+  color:#F5F2F4;
+}
+
+.shafia_nav>a:hover,
+.shafia_nav>a.is-current{
+  color:#F2B8C9;
+}
+
+/* Tombol menu mobile */
+.shafia_menu-toggle span{
+  background:#FFFFFF;
+}
+
+/* Navigasi mobile */
+@media(max-width:900px){
+  .shafia_nav{
+    background:#414047;
+  }
+
+  .shafia_nav>a{
+    color:#FFFFFF;
+  }
+}
+
+/* BACKGROUND BULU KUCING */
+.whiskas-banner {
+  background-color: #E8E8E8;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(255,255,255,.72),
+      rgba(210,210,210,.48)
+    ),
+    url("../bulu-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Warna teks agar tetap terbaca */
+.whiskas-banner h1 {
+  color: #454149;
+  text-shadow: 0 2px 8px rgba(255,255,255,.5);
+}
+
+.whiskas-banner h1 span {
+  color: #B85F83;
+  background: rgba(255,255,255,.85);
+}
+
+.whiskas-banner-copy > p {
+  color: #55515A;
+}
+
+.whiskas-banner-footnote {
+  color: #625D64;
+}
+
+
+/* =====================================
+   WHISKAS - FOTO DAN BOX NUTRISI
+===================================== */
+
+/* Foto Ragdoll tetap berbentuk oval */
+.whiskas-banner-cat {
+  position: relative;
+  z-index: 2;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.whiskas-banner-cat > img {
+  position: relative;
+  z-index: 3 !important;
+
+  width: min(430px, 72%);
+  height: 360px;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 48% 48% 45% 45%;
+
+  border: 5px solid rgba(255,255,255,.25);
+  box-shadow: 0 16px 25px rgba(48,48,55,.25);
+}
+
+/* BOX NUTRISI HARUS DI DEPAN FOTO */
+.whiskas-nutrition-card {
+  position: absolute;
+  z-index: 6 !important;
+
+  width: 205px;
+  min-height: 65px;
+  padding: 10px 13px;
+
+  background: linear-gradient(
+    135deg,
+    #F3F3F5 0%,
+    #C7C7CC 48%,
+    #85858D 100%
+  ) !important;
+
+  border: 2px solid #414047 !important;
+  border-radius: 13px;
+
+  color: #303036 !important;
+  box-shadow: 0 7px 18px rgba(35,35,40,.3);
+}
+
+/* Tulisan box */
+.whiskas-nutrition-card b {
+  color: #303036 !important;
+  font-size: 13px;
+}
+
+.whiskas-nutrition-card strong {
+  color: #FFFFFF !important;
+  font-size: 25px;
+  text-shadow: 0 2px 4px rgba(40,40,45,.3);
+}
+
+.whiskas-nutrition-card small {
+  color: #414047 !important;
+  font-weight: 800;
+}
+
+/* Posisi ketiga box */
+.card-zinc {
+  top: 8%;
+  right: 0;
+  transform: rotate(-3deg);
+}
+
+.card-vitamin {
+  top: 37%;
+  right: -3%;
+  transform: rotate(2deg);
+}
+
+.card-calcium {
+  top: 66%;
+  right: 0;
+  transform: rotate(-2deg);
+}
+
+/* Lingkaran porsi harian */
+.whiskas-food-bowl {
+  z-index: 7 !important;
+  background: linear-gradient(145deg, #F3F3F5, #85858D);
+  border: 3px solid #414047;
+  color: #303036;
+}
+
+/* Tampilan tablet */
+@media(max-width:900px) {
+  .whiskas-banner-cat {
+    min-height: 390px;
+  }
+
+  .whiskas-banner-cat > img {
+    width: 55%;
+    height: 310px;
+  }
+
+  .whiskas-nutrition-card {
+    right: 7%;
+  }
+}
+
+/* Tampilan HP */
+@media(max-width:640px) {
+  .whiskas-banner-cat {
+    min-height: 330px;
+  }
+
+  .whiskas-banner-cat > img {
+    width: 68%;
+    height: 270px;
+  }
+
+  .whiskas-nutrition-card {
+    width: 145px;
+  }
+
+  .card-zinc { top: 5%; }
+  .card-vitamin { top: 38%; right: -3%; }
+  .card-calcium { top: 70%; }
+}
+
+/* =====================================
+   WHISKAS - FOTO DAN BOX NUTRISI
+===================================== */
+
+/* Foto Ragdoll tetap berbentuk oval */
+.whiskas-banner-cat {
+  position: relative;
+  z-index: 2;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.whiskas-banner-cat > img {
+  position: relative;
+  z-index: 3 !important;
+
+  width: min(430px, 72%);
+  height: 360px;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 48% 48% 45% 45%;
+
+  border: 5px solid rgba(255,255,255,.25);
+  box-shadow: 0 16px 25px rgba(48,48,55,.25);
+}
+
+/* BOX NUTRISI HARUS DI DEPAN FOTO */
+.whiskas-nutrition-card {
+  position: absolute;
+  z-index: 6 !important;
+
+  width: 205px;
+  min-height: 65px;
+  padding: 10px 13px;
+
+  background: linear-gradient(
+    135deg,
+    #F3F3F5 0%,
+    #C7C7CC 48%,
+    #85858D 100%
+  ) !important;
+
+  border: 2px solid #414047 !important;
+  border-radius: 13px;
+
+  color: #303036 !important;
+  box-shadow: 0 7px 18px rgba(35,35,40,.3);
+}
+
+/* Tulisan box */
+.whiskas-nutrition-card b {
+  color: #303036 !important;
+  font-size: 13px;
+}
+
+.whiskas-nutrition-card strong {
+  color: #FFFFFF !important;
+  font-size: 25px;
+  text-shadow: 0 2px 4px rgba(40,40,45,.3);
+}
+
+.whiskas-nutrition-card small {
+  color: #414047 !important;
+  font-weight: 800;
+}
+
+/* Posisi ketiga box */
+.card-zinc {
+  top: 8%;
+  right: 0;
+  transform: rotate(-3deg);
+}
+
+.card-vitamin {
+  top: 37%;
+  right: -3%;
+  transform: rotate(2deg);
+}
+
+.card-calcium {
+  top: 66%;
+  right: 0;
+  transform: rotate(-2deg);
+}
+
+/* Lingkaran porsi harian */
+.whiskas-food-bowl {
+  z-index: 7 !important;
+  background: linear-gradient(145deg, #F3F3F5, #85858D);
+  border: 3px solid #414047;
+  color: #303036;
+}
+
+/* Tampilan tablet */
+@media(max-width:900px) {
+  .whiskas-banner-cat {
+    min-height: 390px;
+  }
+
+  .whiskas-banner-cat > img {
+    width: 55%;
+    height: 310px;
+  }
+
+  .whiskas-nutrition-card {
+    right: 7%;
+  }
+}
+
+/* Tampilan HP */
+@media(max-width:640px) {
+  .whiskas-banner-cat {
+    min-height: 330px;
+  }
+
+  .whiskas-banner-cat > img {
+    width: 68%;
+    height: 270px;
+  }
+
+  .whiskas-nutrition-card {
+    width: 145px;
+  }
+
+  .card-zinc { top: 5%; }
+  .card-vitamin { top: 38%; right: -3%; }
+  .card-calcium { top: 70%; }
+}
+
+.whiskas-banner-cat {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whiskas-banner-cat > img {
+  position: relative;
+  z-index: 3;
+  width: min(430px, 72%);
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #414047;
+  overflow: hidden;
+}
+
+
+/* =================================
+   NAVIGATION - WHISKAS GLOW EFFECT
+================================= */
+
+/* Menu navigasi */
+.shafia_nav > a {
+  position: relative;
+  color: #F5F2F4;
+  text-decoration: none;
+  transition: color .3s ease, text-shadow .3s ease;
+  padding: 10px 0;
+}
+
+/* Efek cahaya saat diarahkan */
+.shafia_nav > a:hover,
+.shafia_nav > a.is-current {
+  color: #FFD9EE !important;
+  text-shadow:
+    0 0 5px rgba(255, 217, 238, .8),
+    0 0 13px rgba(255, 180, 220, .6),
+    0 0 22px rgba(255, 255, 255, .35);
+}
+
+/* Garis bawah animasi */
+.shafia_nav > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #FFFFFF,
+    #F2B8D0,
+    #FFFFFF
+  );
+  box-shadow: 0 0 8px rgba(255, 210, 235, .8);
+  transition: width .3s ease;
+}
+
+/* Garis muncul ketika hover atau aktif */
+.shafia_nav > a:hover::after,
+.shafia_nav > a.is-current::after {
+  width: 100%;
+}
+
+/* Hilangkan warna ungu dari efek menu aktif */
+.shafia_nav > a.is-current {
+  color: #FFD9EE !important;
+}
+
+/* Hilangkan tanda V jika masih ada */
+.nav-chevron {
+  display: none !important;
+}
+
+.whiskas-banner h1 {
+  white-space: normal;
+}
+
+.whiskas-banner h1 span {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 7px 17px 9px;
+}
+
+
+/* BOX NUTRISI DENGAN IKON */
+.whiskas-nutrition-card {
+  display: grid;
+  grid-template-columns: 38px 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 9px;
+  row-gap: 3px;
+  padding: 10px 13px;
+}
+
+/* Posisi ikon */
+.whiskas-nutrition-card::before {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  font-size: 27px;
+  text-align: center;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,.15));
+}
+
+/* Ikon ikan untuk Zinc */
+.card-zinc::before {
+  content: "🐟";
+}
+
+/* Ikon telur untuk Vitamin E */
+.card-vitamin::before {
+  content: "🥚";
+}
+
+/* Ikon susu untuk Kalsium */
+.card-calcium::before {
+  content: "🥛";
+}
+
+/* Tulisan nutrisi */
+.whiskas-nutrition-card b {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 12px;
+  color: #414047;
+}
+
+/* Angka nutrisi */
+.whiskas-nutrition-card strong {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+/* Keterangan makanan */
+.whiskas-nutrition-card small {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: left;
+  font-size: 9px;
+  color: #414047;
+  font-weight: 700;
+}
+
+
+/* =================================
+   IKON NUTRISI - SOFT 3D SHADE
+================================= */
+
+/* Bentuk dasar semua ikon */
+.whiskas-nutrition-card::before {
+  grid-column: 1;
+  grid-row: 1 / 3;
+
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  font-size: 25px;
+  line-height: 1;
+
+  background: radial-gradient(
+    circle at 32% 25%,
+    #FFFFFF 0%,
+    #E5E5E8 48%,
+    #A5A5AD 100%
+  );
+
+  border: 1px solid rgba(255,255,255,.85);
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,.9),
+    inset 0 -3px 6px rgba(65,64,71,.2),
+    0 3px 7px rgba(50,50,55,.2);
+}
+
+/* IKAN - ABU-ABU */
+.card-zinc::before {
+  content: "🐟";
+  filter:
+    grayscale(1)
+    brightness(.82)
+    drop-shadow(0 2px 2px rgba(50,50,55,.3));
+}
+
+/* TELUR - KREM LEMBUT */
+.card-vitamin::before {
+  content: "🥚";
+  background: radial-gradient(
+    circle at 30% 25%,
+    #FFFFFF 0%,
+    #F1E5D5 48%,
+    #B9A58E 100%
+  );
+  filter: drop-shadow(0 2px 3px rgba(80,65,50,.3));
+}
+
+/* SUSU - PUTIH KEABU-ABUAN */
+.card-calcium::before {
+  content: "🥛";
+  background: radial-gradient(
+    circle at 30% 25%,
+    #FFFFFF 0%,
+    #E3E5E8 55%,
+    #A4A8AF 100%
+  );
+  filter: drop-shadow(0 2px 3px rgba(55,55,65,.3));
+}
+
+
+/* NAVBAR — DARK GREY */
+.shafia_header{
+  background:#414047;
+  border-bottom:1px solid #55525A;
+}
+
+/* Logo Whiskas */
+.shafia_nav-wrap .shafia_logo{
+  color:#FFFFFF;
+}
+
+/* Tulisan menu */
+.shafia_nav>a,
+.shafia_utility a{
+  color:#F5F2F4;
+}
+
+.shafia_nav>a:hover,
+.shafia_nav>a.is-current{
+  color:#F2B8C9;
+}
+
+/* Tombol menu mobile */
+.shafia_menu-toggle span{
+  background:#FFFFFF;
+}
+
+/* Navigasi mobile */
+@media(max-width:900px){
+  .shafia_nav{
+    background:#414047;
+  }
+
+  .shafia_nav>a{
+    color:#FFFFFF;
+  }
+}
+
+
+/* MENGHILANGKAN TOMBOL KOTAK DI SAMPING PENCARIAN */
+.whiskas-nav-search {
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 38px;
+  padding: 0 14px;
+  border: 1px solid #85828A;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #65636B, #414047, #55525B);
+}
+
+.whiskas-nav-search input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 10px;
+}
+
+.whiskas-nav-search input::placeholder {
+  color: #D5D1D8;
+}
+
+/* Sembunyikan tombol kotak */
+.whiskas-nav-search button {
+  display: none !important;
+}
+
+
+/* EFEK GLOW DAN UNDERLINE MENU BAGIAN ATAS */
+.shafia_utility > a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  transition: color .3s ease, text-shadow .3s ease;
+}
+
+/* Cahaya saat diarahkan */
+.shafia_utility > a:hover {
+  color: #FFD9EE !important;
+  text-shadow:
+    0 0 5px rgba(255, 217, 238, .9),
+    0 0 13px rgba(255, 180, 220, .8),
+    0 0 22px rgba(255, 255, 255, .5);
+}
+
+/* Garis bawah animasi */
+.shafia_utility > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #FFFFFF,
+    #F2B8D0,
+    #FFFFFF
+  );
+  box-shadow: 0 0 9px rgba(255, 210, 235, .9);
+  transition: width .3s ease;
+}
+
+/* Garis muncul saat hover */
+.shafia_utility > a:hover::after {
+  width: 100%;
+}
+
+/* TURUNKAN MENU BAGIAN ATAS */
+.shafia_utility {
+  position: relative;
+  top: 15px;
+}
+
+/* EFEK HOVER TOMBOL KENALI NUTRISI WHISKAS */
+.whiskas-banner a {
+  transition: all 0.3s ease;
+}
+
+.whiskas-banner a:hover {
+  color: #FFD9EE !important;
+  text-shadow:
+    0 0 5px rgba(255, 217, 238, 0.9),
+    0 0 12px rgba(255, 180, 220, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* ANIMASI PANAH */
+.whiskas-banner a:hover::after {
+  transform: translateX(5px);
+}
+
+/* SAMAKAN WARNA KEAJAIBAN KECIL DENGAN JUDUL BANNER */
+.shafia_intro-content h2 em {
+  color: #B85F83 !important;
+}
+
+/* BAGIAN UNTUK SETIAP SUASANA */
+.shafia_feature-band {
+  background: #E2E2E4 !important; /* Abu-abu muda */
+}
+
+/* TEKS SELALU DISAYANGI */
+.shafia_feature-copy h2 em {
+  color: #B85F83 !important; /* Abu-abu tua */
+}
+
+/* WARNA TEKS LAIN AGAR TETAP TERBACA */
+.shafia_feature-copy h2 {
+  color: #000000 !important;
+}
+
+.shafia_feature-copy p {
+  color: #55545A !important;
+}
+
+.shafia_feature-copy .shafia_eyebrow {
+  color: #55545A !important;
+}
+
+.shafia_feature-copy .shafia_btn {
+  color: #414047 !important;
+  border-color: #55545A !important;
+}
+
+/* WARNA DUSTY PINK - KESUKAAN MEREKA */
+.shafia_section-heading h2 em {
+  color: #B85F83 !important;
+}
+
+/* FOTO KEMASAN PRODUK */
+.shafia_pack-photo {
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.shafia_pack-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+
+.shafia_pack-photo img:hover {
+  transform: scale(1.06);
+}
+
+/* KATEGORI PRODUK */
+.shafia_product-tag {
+  font-weight: 800 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* IKON TEMPAT MAKAN */
+.shafia_product-tag::before {
+  content: "🥣";
+  font-size: 17px;
+}
+
+/* BAGIAN PERAWATAN KUCING */
+.shafia_care-cta-copy h2 {
+  color: #29272B !important;
+}
+
+/* DUSTY PINK */
+.shafia_care-cta-copy h2 em {
+  color: #B85F83 !important;
+}
+
+/* TEKS DESKRIPSI */
+.shafia_care-cta-copy p {
+  color: #454149 !important;
+}
+
+/* LABEL BAGIAN */
+.shafia_care-cta-copy .shafia_eyebrow {
+  color: #55545A !important;
+}
+
+/* TOMBOL JELAJAHI PERAWATAN KUCING */
+.shafia_care-cta .shafia_btn-yellow {
+  background: #DADADD !important;
+  color: #454149 !important;
+  border: 1px solid #DADADD !important;
+  transition: all .3s ease;
+}
+
+.shafia_care-cta .shafia_btn-yellow:hover {
+  background: #C8C8CC !important;
+  color: #454149 !important;
+  border-color: #C8C8CC !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(65, 64, 71, .15);
+}
+
+/* WARNA DENGKURAN SAMA DENGAN NAVIGASI */
+.shafia_quote-section blockquote em {
+  color: #646366 !important;
+}
+
+/* BACKGROUND FOOTER ABU-ABU NAVIGASI */
+.shafia_footer {
+  background: #414047 !important;
+}
+
+
+/* KEUNGGULAN WHISKAS */
+.whiskas-reasons {
+  background: #E2E2E4 !important;
+}
+
+.whiskas-reasons h2 {
+  color: #414047 !important;
+}
+
+.whiskas-reasons h2 em {
+  color: #B85F83 !important;
+}
+
+.whiskas-reason-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.whiskas-reason-card {
+  background: #F7F6F6;
+  border: 1px solid #D4D2D5;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.whiskas-reason-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 22px;
+}
+
+.whiskas-reason-card > span {
+  color: #B85F83;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.whiskas-reason-card h3 {
+  color: #414047;
+  font-size: 23px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.whiskas-reason-card p {
+  color: #55545A;
+  line-height: 1.8;
+}
+
+.whiskas-reason-note {
+  color: #77747A;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.whiskas-reason-card .shafia_text-link {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .whiskas-reason-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whiskas-reason-card img {
+    height: 190px;
+  }
+}
+
+
+/* =========================================
+   ABOUT PAGE — WHISKAS GREY & DUSTY PINK
+========================================= */
+
+/* HERO ABOUT */
+.shafia_page-hero-purple {
+  background-color: #E8E8E8 !important;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(255,255,255,.76),
+      rgba(210,210,210,.50)
+    ),
+    url("../bulu-background.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: #414047 !important;
+}
+
+.shafia_page-hero .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_page-hero .shafia_eyebrow-light {
+  color: #B85F83 !important;
+}
+
+.shafia_page-hero h1 {
+  color: #414047 !important;
+}
+
+.shafia_page-hero h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_page-hero p {
+  color: #55545A !important;
+}
+
+.shafia_page-hero img {
+  border: 5px solid rgba(255,255,255,.8);
+  box-shadow: 0 15px 30px rgba(65,64,71,.18);
+}
+
+.shafia_page-hero-shape {
+  border-color: rgba(65,64,71,.15) !important;
+}
+
+/* BAGIAN PENGENALAN WALTHAM */
+.shafia_story-grid h2,
+.shafia_split h2 {
+  color: #414047 !important;
+}
+
+.shafia_story-grid h2 em,
+.shafia_split h2 em {
+  color: #B85F83 !important;
+}
+
+.shafia_story-grid .shafia_eyebrow,
+.shafia_split .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_story-grid p,
+.shafia_split p {
+  color: #55545A !important;
+}
+
+/* BAGIAN KEUNGGULAN WHISKAS */
+.whiskas-reasons {
+  background: #E2E2E4 !important;
+  color: #414047 !important;
+}
+
+.whiskas-reasons .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.whiskas-reasons h2 {
+  color: #414047 !important;
+}
+
+.whiskas-reasons h2 em {
+  color: #B85F83 !important;
+}
+
+/* KARTU INFORMASI */
+.whiskas-reason-card {
+  background: #F7F6F6 !important;
+  border: 1px solid #D4D2D5 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 22px rgba(65,64,71,.06);
+  transition: transform .3s ease,
+              box-shadow .3s ease,
+              border-color .3s ease;
+}
+
+.whiskas-reason-card:hover {
+  transform: translateY(-6px);
+  border-color: #B85F83 !important;
+  box-shadow: 0 15px 30px rgba(65,64,71,.12);
+}
+
+.whiskas-reason-card > span {
+  color: #B85F83 !important;
+}
+
+.whiskas-reason-card h3 {
+  color: #414047 !important;
+}
+
+.whiskas-reason-card p {
+  color: #55545A !important;
+}
+
+.whiskas-reason-note {
+  color: #77747A !important;
+}
+
+.whiskas-reason-card .shafia_text-link {
+  color: #B85F83 !important;
+  transition: color .3s ease;
+}
+
+.whiskas-reason-card .shafia_text-link:hover {
+  color: #414047 !important;
+}
+
+/* BAGIAN WALTHAM */
+.shafia_split img {
+  border-radius: 18px;
+  background: #E2E2E4;
+  padding: 15px;
+  object-fit: contain;
+  box-shadow: 0 12px 25px rgba(65,64,71,.09);
+}
+
+/* LINK */
+.shafia_split .shafia_text-link {
+  color: #B85F83 !important;
+}
+
+.shafia_split .shafia_text-link:hover {
+  color: #414047 !important;
+}
+
+/* FOOTER */
+.shafia_footer {
+  background: #414047 !important;
+}
+
+/* RESPONSIVE ABOUT */
+@media(max-width:640px) {
+  .shafia_page-hero {
+    gap: 20px;
+  }
+
+  .shafia_page-hero img {
+    height: 250px;
+  }
+
+  .whiskas-reason-card {
+    padding: 20px;
+  }
+
+  .whiskas-reason-card img {
+    height: 190px;
+  }
+
+  .shafia_split img {
+    height: 280px;
+  }
+}
+
+/* =================================
+   PRODUCTS PAGE - WHISKAS THEME
+================================= */
+
+.shafia_page-heading {
+  background: #E8E8E8;
+  padding-top: 90px;
+  padding-bottom: 65px;
+}
+
+.shafia_page-heading .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_page-heading h1 {
+  color: #414047 !important;
+}
+
+.shafia_page-heading h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_page-heading p {
+  color: #55545A !important;
+  max-width: 580px;
+}
+
+/* Area katalog */
+.shafia_products-area {
+  background: #E2E2E4;
+}
+
+/* Filter */
+.shafia_filter {
+  background: #F7F6F6 !important;
+  color: #414047 !important;
+  border: 1px solid #D4D2D5 !important;
+  transition: .3s ease;
+}
+
+.shafia_filter:hover,
+.shafia_filter.is-active {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+  border-color: #B85F83 !important;
+}
+
+/* Jumlah produk */
+.shafia_product-count {
+  color: #55545A !important;
+}
+
+/* Kartu katalog */
+.shafia_catalog-card {
+  background: #F7F6F6 !important;
+  border: 1px solid #D4D2D5 !important;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.shafia_catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(65,64,71,.12);
+}
+
+/* Area ilustrasi */
+.shafia_catalog-art {
+  background: #E2E2E4 !important;
+}
+
+/* Informasi produk */
+.shafia_catalog-info h3 {
+  color: #414047 !important;
+}
+
+.shafia_catalog-info p {
+  color: #55545A !important;
+}
+
+.shafia_catalog-info > a {
+  color: #B85F83 !important;
+}
+
+/* Kategori */
+.shafia_product-tag {
+  color: #B85F83 !important;
+  font-weight: 800;
+}
+
+/* Catatan katalog */
+.shafia_disclaimer {
+  color: #77747A !important;
+}
+
+/* Footer */
+.shafia_footer {
+  background: #414047 !important;
+}
+
+
+/* =====================================
+   PRODUCTS PAGE - WHISKAS COLOR THEME
+===================================== */
+
+/* HERO PRODUK */
+.shafia_page-heading {
+  background-color: #E8E8E8 !important;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(255,255,255,.76),
+      rgba(210,210,210,.50)
+    ),
+    url("../bulu-background.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding-top: 90px;
+  padding-bottom: 75px;
+}
+
+.shafia_page-heading .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_page-heading h1 {
+  color: #414047 !important;
+}
+
+.shafia_page-heading h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_page-heading p {
+  color: #55545A !important;
+}
+
+/* AREA KATALOG */
+.shafia_products-area {
+  background: #E2E2E4 !important;
+}
+
+/* FILTER KATEGORI */
+.shafia_filter {
+  background: #F7F6F6 !important;
+  color: #414047 !important;
+  border: 1px solid #D4D2D5 !important;
+  transition: all .3s ease;
+}
+
+.shafia_filter:hover,
+.shafia_filter.is-active {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+  border-color: #B85F83 !important;
+}
+
+/* JUMLAH PRODUK */
+.shafia_product-count {
+  color: #55545A !important;
+}
+
+/* KARTU PRODUK */
+.shafia_catalog-card {
+  background: #F7F6F6 !important;
+  border: 1px solid #D4D2D5 !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(65,64,71,.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.shafia_catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(65,64,71,.12);
+}
+
+/* AREA ILUSTRASI PRODUK */
+.shafia_catalog-art {
+  background: #E2E2E4 !important;
+}
+
+/* LABEL KATEGORI */
+.shafia_product-tag {
+  color: #B85F83 !important;
+  font-weight: 800 !important;
+}
+
+/* INFORMASI PRODUK */
+.shafia_catalog-info h3 {
+  color: #414047 !important;
+}
+
+.shafia_catalog-info p {
+  color: #55545A !important;
+}
+
+.shafia_catalog-info > a {
+  color: #B85F83 !important;
+  transition: all .3s ease;
+}
+
+.shafia_catalog-info > a:hover {
+  color: #414047 !important;
+  transform: translate(3px,-3px);
+}
+
+/* CATATAN KATALOG */
+.shafia_disclaimer {
+  color: #77747A !important;
+}
+
+/* FOOTER */
+.shafia_footer {
+  background: #414047 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .shafia_page-heading {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+
+  .shafia_catalog-card {
+    border-radius: 14px !important;
+  }
+}
+
+
+/* FOTO PRODUK INTERNAL */
+.shafia_product-photo {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.shafia_product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.shafia_catalog-card:hover .shafia_product-photo img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================
+   KATALOG PRODUK - SOFT PASTEL CARDS
+===================================== */
+
+/* KARTU PRODUK */
+.shafia_catalog-card {
+  border: none !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 5px 16px rgba(65, 64, 71, .05);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* WARNA PASTEL SETIAP KARTU */
+.shafia_catalog-card:nth-child(3n + 1) {
+  background: #E9DDF0 !important;
+}
+
+.shafia_catalog-card:nth-child(3n + 2) {
+  background: #F7E9AE !important;
+}
+
+.shafia_catalog-card:nth-child(3n) {
+  background: #F0DDE2 !important;
+}
+
+/* AREA FOTO PRODUK */
+.shafia_catalog-art {
+  background: transparent !important;
+  padding: 20px 20px 0 !important;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* FOTO INTERNAL */
+.shafia_product-photo {
+  width: 100%;
+  height: 245px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.shafia_product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .35s ease;
+}
+
+.shafia_catalog-card:hover .shafia_product-photo img {
+  transform: scale(1.06);
+}
+
+/* INFORMASI PRODUK */
+.shafia_catalog-info {
+  background: transparent !important;
+  padding: 15px 22px 24px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.shafia_catalog-info h3 {
+  color: #343139 !important;
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.shafia_catalog-info p {
+  color: #68636D !important;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.shafia_catalog-info > a {
+  color: #B85F83 !important;
+  font-size: 23px;
+  flex-shrink: 0;
+  transition: transform .3s ease;
+}
+
+.shafia_catalog-info > a:hover {
+  transform: translate(4px, -4px);
+}
+
+/* EFEK HOVER KARTU */
+.shafia_catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 13px 28px rgba(65, 64, 71, .12);
+}
+
+/* LABEL KATEGORI */
+.shafia_product-tag {
+  color: #B85F83 !important;
+  font-weight: 800 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .shafia_catalog-art {
+    min-height: 250px;
+  }
+
+  .shafia_product-photo {
+    height: 210px;
+  }
+
+  .shafia_catalog-info {
+    padding: 12px 18px 20px !important;
+  }
+}
+
+/* =====================================
+   6 KARTU PRODUK - 6 WARNA PASTEL
+===================================== */
+
+/* BARIS PERTAMA */
+.shafia_catalog-card:nth-child(1) {
+  background: #E9DDF0 !important; /* Lavender */
+}
+
+.shafia_catalog-card:nth-child(2) {
+  background: #ffeeaab6 !important; /* Butter Yellow */
+}
+
+.shafia_catalog-card:nth-child(3) {
+  background: #F0DDE2 !important; /* Dusty Pink */
+}
+
+/* BARIS KEDUA - WARNA BARU */
+.shafia_catalog-card:nth-child(4) {
+  background: #DCEBE5 !important; /* Mint Green */
+}
+
+.shafia_catalog-card:nth-child(5) {
+  background: #DCE8F4 !important; /* Soft Blue */
+}
+
+.shafia_catalog-card:nth-child(6) {
+  background: #F4E2D3 !important; /* Peach */
+}
+
+/* AREA FOTO TRANSPARAN */
+.shafia_catalog-card .shafia_catalog-art {
+  background: transparent !important;
+}
+
+/* AREA INFORMASI MENYATU DENGAN KARTU */
+.shafia_catalog-card .shafia_catalog-info {
+  background: transparent !important;
+}
+
+
+/* =====================================
+   NUTRITION PAGE - WHISKAS THEME
+===================================== */
+
+.shafia_nutrition-hero {
+  background-color: #E8E8E8 !important;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(255,255,255,.76),
+      rgba(210,210,210,.50)
+    ),
+    url("../bulu-background.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: #414047 !important;
+  padding: 90px 0 !important;
+}
+
+.shafia_nutrition-hero h1 {
+  color: #414047 !important;
+}
+
+.shafia_nutrition-hero h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_nutrition-hero p {
+  color: #55545A !important;
+}
+
+.shafia_nutrition-hero .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_nutrition-hero .shafia_btn {
+  background: #DADADD !important;
+  color: #414047 !important;
+  border: 1px solid #DADADD !important;
+}
+
+.shafia_nutrition-hero .shafia_btn:hover {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+}
+
+/* TAHAP KEHIDUPAN */
+#shafia_nutrition-basics {
+  background: #E2E2E4;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#shafia_nutrition-basics h2 {
+  color: #414047 !important;
+}
+
+#shafia_nutrition-basics h2 em {
+  color: #B85F83 !important;
+}
+
+#shafia_nutrition-basics .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_stage-grid article {
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(65,64,71,.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.shafia_stage-grid article:nth-child(1) {
+  background: #E9DDF0 !important;
+}
+
+.shafia_stage-grid article:nth-child(2) {
+  background: #F7E9AE !important;
+}
+
+.shafia_stage-grid article:nth-child(3) {
+  background: #F0DDE2 !important;
+}
+
+.shafia_stage-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(65,64,71,.12);
+}
+
+.shafia_stage-grid h3 {
+  color: #414047 !important;
+}
+
+.shafia_stage-grid p {
+  color: #55545A !important;
+}
+
+/* BAGIAN KEBIASAAN MAKAN */
+.shafia_feed-band {
+  background: #E2E2E4 !important;
+  color: #414047 !important;
+  padding: 75px 0 !important;
+}
+
+.shafia_feed-band h2 {
+  color: #414047 !important;
+}
+
+.shafia_feed-band .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_feed-band p,
+.shafia_feed-band li {
+  color: #55545A !important;
+}
+
+.shafia_feed-band img {
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(65,64,71,.12);
+}
+
+/* PENGINGAT NUTRISI */
+.shafia_notice {
+  background: #F7F6F6;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  border-radius: 16px;
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+.shafia_notice h2 {
+  color: #414047 !important;
+}
+
+.shafia_notice h2 em {
+  color: #B85F83 !important;
+}
+
+.shafia_notice .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_notice p {
+  color: #55545A !important;
+}
+
+/* FOOTER */
+.shafia_footer {
+  background: #414047 !important;
+}
+
+@media (max-width: 640px) {
+  .shafia_nutrition-hero {
+    padding: 60px 0 !important;
+  }
+
+  .shafia_feed-band {
+    padding: 45px 0 !important;
+  }
+
+  .shafia_notice {
+    margin: 35px 16px;
+    padding: 30px 22px;
+  }
+}
+
+
+/* =====================================
+   PANDUAN MEMBERI MAKAN - NUTRITION
+===================================== */
+
+.shafia_cat-profile {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.shafia_cat-form-card {
+  background: #F7F6F6;
+  border: 1px solid rgba(65,64,71,.08);
+  border-radius: 22px;
+  padding: 38px;
+  margin-top: 35px;
+}
+
+.shafia_cat-form-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.shafia_cat-form-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background: #F0DDE2;
+  border-radius: 50%;
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.shafia_cat-form-intro h3 {
+  color: #414047;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.shafia_cat-form-intro p,
+.shafia_cat-form-note {
+  color: #55545A;
+}
+
+.shafia_cat-form-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.shafia_cat-form-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #414047;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.shafia_cat-form-fields input,
+.shafia_cat-form-fields select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #DADADD;
+  border-radius: 10px;
+  background: #fff;
+  color: #414047;
+  font: inherit;
+  outline: none;
+}
+
+.shafia_cat-form-fields input:focus,
+.shafia_cat-form-fields select:focus {
+  border-color: #B85F83;
+  box-shadow: 0 0 0 3px rgba(184,95,131,.12);
+}
+
+.shafia_cat-form-note {
+  margin-top: 22px;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* TRANSISI MAKANAN */
+
+.shafia_transition-section {
+  background: #E2E2E4;
+  padding: 80px 0;
+}
+
+.shafia_transition-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  margin-top: 40px;
+}
+
+.shafia_transition-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(65,64,71,.10);
+}
+
+.shafia_transition-content h3 {
+  color: #414047;
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 12px 0 16px;
+}
+
+.shafia_transition-content > p {
+  color: #55545A;
+  line-height: 1.8;
+}
+
+.shafia_transition-steps {
+  display: grid;
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.shafia_transition-steps > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #F7F6F6;
+  border-radius: 12px;
+}
+
+.shafia_transition-steps span {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #F0DDE2;
+  color: #B85F83;
+  font-weight: 800;
+}
+
+.shafia_transition-steps p {
+  color: #55545A;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.shafia_transition-content .shafia_transition-note {
+  padding: 14px 17px;
+  border-left: 3px solid #B85F83;
+  background: rgba(255,255,255,.55);
+  font-size: 13px;
+}
+
+/* TIPS PEMBERIAN MAKAN */
+
+.shafia_feed-band {
+  background: #E8E8E8 !important;
+  color: #414047 !important;
+}
+
+.shafia_feed-band h2 {
+  color: #414047 !important;
+}
+
+.shafia_feed-band p,
+.shafia_feed-band li {
+  color: #55545A !important;
+  line-height: 1.8;
+}
+
+.shafia_feed-band li {
+  margin-bottom: 10px;
+}
+
+.shafia_feed-band img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* REKOMENDASI PRODUK */
+
+.shafia_recommend-section {
+  background: #F7F6F6;
+  padding: 80px 0;
+}
+
+.shafia_recommend-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 42px;
+}
+
+.shafia_recommend-heading h2 {
+  color: #414047;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+.shafia_recommend-heading h2 em {
+  color: #B85F83;
+}
+
+.shafia_recommend-heading p {
+  color: #55545A;
+  line-height: 1.8;
+}
+
+.shafia_recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.shafia_recommend-card {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(65,64,71,.07);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.shafia_recommend-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 28px rgba(65,64,71,.12);
+}
+
+.shafia_recommend-lilac {
+  background: #E9DDF0;
+}
+
+.shafia_recommend-pink {
+  background: #F0DDE2;
+}
+
+.shafia_recommend-yellow {
+  background: #F7E9AE;
+}
+
+.shafia_recommend-image {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+
+.shafia_recommend-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.shafia_recommend-info {
+  padding: 25px;
+}
+
+.shafia_recommend-info .shafia_product-tag {
+  display: inline-block;
+  color: #B85F83;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.shafia_recommend-info h3 {
+  color: #414047;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.shafia_recommend-info p {
+  color: #55545A;
+  line-height: 1.7;
+  min-height: 82px;
+}
+
+.shafia_recommend-info a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #414047;
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 1px solid #B85F83;
+  padding-bottom: 5px;
+  transition: color .25s ease;
+}
+
+.shafia_recommend-info a:hover {
+  color: #B85F83;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .shafia_cat-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .shafia_transition-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .shafia_recommend-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .shafia_cat-form-card {
+    padding: 25px 18px;
+  }
+
+  .shafia_transition-section,
+  .shafia_recommend-section {
+    padding: 55px 0;
+  }
+
+  .shafia_recommend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shafia_recommend-heading h2 {
+    font-size: 28px;
+  }
+
+  .shafia_recommend-image {
+    height: 230px;
+  }
+
+  .shafia_recommend-info p {
+    min-height: auto;
+  }
+}
+
+
+/* =========================================
+   FINAL FIX - HALAMAN NUTRISI WHISKAS
+========================================= */
+
+/* HERO */
+.shafia_nutrition-hero {
+  background-color: #E8E8E8 !important;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(255,255,255,.76),
+      rgba(210,210,210,.50)
+    ),
+    url("../bulu-background.png") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  color: #414047 !important;
+  min-height: 420px;
+  padding: 90px 0 !important;
+}
+
+.shafia_nutrition-hero h1 {
+  color: #414047 !important;
+  font-size: clamp(48px, 6vw, 76px) !important;
+  line-height: 1.1;
+}
+
+.shafia_nutrition-hero h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_nutrition-hero p {
+  color: #55545A !important;
+  max-width: 520px;
+  line-height: 1.8;
+}
+
+.shafia_nutrition-hero .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+/* BAGIAN DASAR NUTRISI */
+#shafia_nutrition-basics {
+  background: #E2E2E4 !important;
+  padding: 75px 0 !important;
+}
+
+#shafia_nutrition-basics h2 {
+  color: #414047 !important;
+}
+
+#shafia_nutrition-basics h2 em {
+  color: #B85F83 !important;
+}
+
+#shafia_nutrition-basics .shafia_section-heading > p {
+  color: #55545A !important;
+}
+
+/* KARTU USIA KUCING */
+.shafia_stage-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.shafia_stage-grid article {
+  min-width: 0;
+  min-height: 260px;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(65,64,71,.08);
+}
+
+.shafia_stage-grid article:nth-child(1) {
+  background: #E9DDF0 !important;
+}
+
+.shafia_stage-grid article:nth-child(2) {
+  background: #F7E9AE !important;
+}
+
+.shafia_stage-grid article:nth-child(3) {
+  background: #F0DDE2 !important;
+}
+
+.shafia_stage-grid h3 {
+  color: #414047 !important;
+}
+
+.shafia_stage-grid p {
+  color: #55545A !important;
+  line-height: 1.8;
+}
+
+/* FORM PROFIL KUCING */
+.shafia_cat-profile {
+  padding: 75px 0 !important;
+  background: #F7F6F6 !important;
+}
+
+.shafia_cat-form-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 35px auto 0;
+  padding: 38px;
+  background: #F7F6F6 !important;
+  border: 1px solid rgba(65,64,71,.10);
+  border-radius: 22px;
+}
+
+.shafia_cat-form-fields {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.shafia_cat-form-fields label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+  color: #414047;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.shafia_cat-form-fields input,
+.shafia_cat-form-fields select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 49px;
+  padding: 0 14px;
+  border: 1px solid #DADADD;
+  border-radius: 11px;
+  background: #FFFFFF;
+  color: #414047;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.shafia_cat-form-note {
+  color: #55545A;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+  margin-top: 22px;
+}
+
+/* HASIL FORM */
+.shafia_cat-result {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 28px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.shafia_cat-result[hidden] {
+  display: none !important;
+}
+
+/* TRANSISI MAKANAN */
+.shafia_transition-section {
+  background: #E2E2E4 !important;
+  padding: 80px 0 !important;
+}
+
+.shafia_transition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 45px;
+}
+
+.shafia_transition-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 18px;
+}
+
+.shafia_transition-content h3 {
+  color: #414047 !important;
+}
+
+.shafia_transition-content p {
+  color: #55545A !important;
+}
+
+/* KEBIASAAN MEMBERI MAKAN */
+.shafia_feed-band {
+  background: #E8E8E8 !important;
+  color: #414047 !important;
+  padding: 75px 0 !important;
+}
+
+.shafia_feed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 45px;
+}
+
+.shafia_feed-grid img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.shafia_feed-grid h2 {
+  color: #414047 !important;
+}
+
+.shafia_feed-grid p,
+.shafia_feed-grid li {
+  color: #55545A !important;
+  line-height: 1.8;
+}
+
+/* REKOMENDASI PRODUK */
+.shafia_recommend-section {
+  background: #F7F6F6 !important;
+  padding: 80px 0 !important;
+}
+
+.shafia_recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.shafia_recommend-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.shafia_recommend-heading h2 {
+  color: #414047 !important;
+}
+
+.shafia_recommend-heading h2 em {
+  color: #B85F83 !important;
+}
+
+.shafia_recommend-info h3 {
+  color: #414047 !important;
+}
+
+.shafia_recommend-info p {
+  color: #55545A !important;
+}
+
+/* PENGINGAT */
+.shafia_notice {
+  max-width: 850px;
+  box-sizing: border-box;
+  background: #F7F6F6 !important;
+  padding: 65px 40px !important;
+  border-radius: 18px;
+  margin: 65px auto !important;
+}
+
+.shafia_notice h2 {
+  color: #414047 !important;
+}
+
+.shafia_notice h2 em {
+  color: #B85F83 !important;
+}
+
+.shafia_notice p {
+  color: #55545A !important;
+  line-height: 1.9;
+}
+
+/* TABLET */
+@media (max-width: 850px) {
+  .shafia_cat-form-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shafia_stage-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .shafia_transition-grid,
+  .shafia_feed-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .shafia_recommend-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .shafia_nutrition-hero {
+    min-height: auto;
+    padding: 60px 0 !important;
+  }
+
+  .shafia_nutrition-hero h1 {
+    font-size: 43px !important;
+  }
+
+  .shafia_stage-grid,
+  .shafia_cat-form-fields,
+  .shafia_recommend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shafia_cat-form-card {
+    padding: 24px 18px;
+  }
+
+  .shafia_feed-grid img {
+    height: 260px;
+  }
+
+  .shafia_notice {
+    margin: 35px 16px !important;
+    padding: 35px 22px !important;
+  }
+}
+
+
+.shafia_cat-profile {
+  width: 100%;
+  background: #F7F6F6 !important;
+  padding: 75px 0 !important;
+  box-sizing: border-box;
+}
+
+.shafia_cat-profile .shafia_container {
+  width: min(90%, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HASIL PROFIL KUCING - PINK */
+.shafia_cat-result:not([hidden]) {
+  display: block !important;
+  margin-top: 28px !important;
+  padding: 30px !important;
+  background: #FCEAF1 !important;
+  border: 1px solid #EBC2D2 !important;
+  border-radius: 18px !important;
+  color: #414047 !important;
+  box-sizing: border-box;
+  line-height: 1.8;
+}
+
+.shafia_cat-result h3,
+.shafia_cat-result h4 {
+  color: #A84F75 !important;
+  margin-bottom: 14px;
+}
+
+.shafia_cat-result strong {
+  color: #9E496D !important;
+}
+
+.shafia_cat-result a {
+  color: #A84F75 !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shafia_cat-result a:hover {
+  text-decoration: underline;
+}
+
+/* TOMBOL PANDUAN */
+.shafia_cat-submit {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #B85F83 !important;
+  border-radius: 30px !important;
+  padding: 13px 24px !important;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.shafia_cat-submit:hover {
+  background: #A34F72 !important;
+}
+
+
+/* =================================
+   LAYOUT HASIL PROFIL KUCING
+================================= */
+
+.shafia_cat-result:not([hidden]) {
+  display: block !important;
+  width: 100%;
+  margin-top: 30px !important;
+  padding: 25px !important;
+  background: #FCEAF1 !important;
+  border: 1px solid #EBC2D2 !important;
+  border-radius: 20px !important;
+  box-sizing: border-box;
+  color: #414047 !important;
+}
+
+.shafia_cat-result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Bagian judul profil */
+.shafia_cat-result-icon {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.shafia_cat-result-content .shafia_eyebrow {
+  color: #A34F72 !important;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.shafia_cat-result-content h3 {
+  color: #B85F83 !important;
+  font-size: 23px;
+  margin: 5px 0 0;
+}
+
+/* Data nama, usia, berat */
+.shafia_cat-result-data {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 5px 0 10px;
+}
+
+.shafia_cat-result-data > div {
+  background: #FFF9FB;
+  border: 1px solid #F0D2DF;
+  border-radius: 13px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.shafia_cat-result-data strong {
+  color: #A34F72 !important;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.shafia_cat-result-data span {
+  color: #777078;
+  font-size: 12px;
+}
+
+/* Panduan makan */
+.shafia_cat-result-guide {
+  background: #FFF9FB;
+  border-radius: 14px;
+  padding: 20px;
+  border-left: 4px solid #C87596;
+}
+
+.shafia_cat-result-guide h4 {
+  color: #A34F72 !important;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.shafia_cat-result-guide p {
+  color: #55545A;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Pengingat */
+.shafia_cat-result-reminder {
+  background: #F8DFE9;
+  border-radius: 13px;
+  padding: 17px 20px;
+}
+
+.shafia_cat-result-reminder strong {
+  display: block;
+  color: #A34F72 !important;
+  margin-bottom: 6px;
+}
+
+.shafia_cat-result-reminder p {
+  color: #55545A;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Link menuju panduan transisi */
+.shafia_cat-result-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 11px 18px;
+  border-radius: 30px;
+  background: #B85F83;
+  color: white !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+
+.shafia_cat-result-link:hover {
+  background: #984568;
+  transform: translateY(-2px);
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .shafia_cat-result:not([hidden]) {
+    padding: 18px !important;
+  }
+
+  .shafia_cat-result-data {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .shafia_cat-result-data > div {
+    padding: 13px 15px;
+  }
+
+  .shafia_cat-result-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* JUDUL PROFIL KUCING DI TENGAH */
+.shafia_cat-result .shafia_eyebrow,
+.shafia_cat-result h3 {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+}
+
+.shafia_cat-result .shafia_eyebrow {
+  margin-bottom: 8px;
+}
+
+.shafia_cat-result h3 {
+  margin-top: 8px !important;
+}
+
+/* HEADER HASIL PROFIL DI TENGAH */
+.shafia_cat-result-icon {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+  font-size: 30px;
+  margin: 0 auto 8px !important;
+}
+
+.shafia_cat-result .shafia_eyebrow,
+.shafia_cat-result h3 {
+  display: block;
+  width: 100%;
+  text-align: center !important;
+}
+
+/* WARNA PINK CERAH LINK PANDUAN */
+.shafia_cat-result a,
+.shafia_cat-result a:link,
+.shafia_cat-result a:visited {
+  color: #D982A5 !important;
+  -webkit-text-fill-color: #D982A5 !important;
+  font-weight: 800 !important;
+}
+
+.shafia_cat-result a:hover {
+  color: #C66F94 !important;
+  -webkit-text-fill-color: #C66F94 !important;
+}
+
+
+
+
+/* HERO PERAWATAN KUCING */
+.shafia_care-hero {
+  width: 100%;
+  min-height: 480px;
+  background-color: #E8E8E8;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.72),
+      rgba(255, 255, 255, 0.72)
+    ),
+    url("../bulu-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 100px 0 110px;
+  box-sizing: border-box;
+}
+
+.shafia_care-hero .shafia_container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+.shafia_care-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.12;
+  font-weight: 700;
+  color: #414047;
+  margin: 25px 0;
+}
+
+.shafia_care-hero h1 em {
+  color: #B85F83;
+  font-style: normal;
+}
+
+.shafia_care-hero p {
+  max-width: 650px;
+  color: #55545A;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .shafia_care-hero {
+    min-height: auto;
+    padding: 75px 0;
+  }
+}
+
+
+/* =================================
+   PANDUAN BERDASARKAN USIA KUCING
+================================= */
+
+.shafia_care-age {
+  width: 100%;
+  padding: 90px 0 !important;
+  background: #F8F4EF !important;
+  box-sizing: border-box;
+}
+
+.shafia_care-age > .shafia_container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+/* JUDUL SECTION */
+.shafia_care-age .shafia_section-heading {
+  display: grid;
+  grid-template-columns: 1.5fr .7fr;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+
+.shafia_care-age .shafia_section-heading h2 {
+  max-width: 650px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  color: #414047;
+  margin: 15px 0 0;
+}
+
+.shafia_care-age .shafia_section-heading h2 em {
+  color: #B85F83;
+  font-style: normal;
+}
+
+.shafia_care-age .shafia_section-heading > p {
+  color: #77727A;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 260px;
+  margin-bottom: 5px;
+}
+
+/* GRID KARTU */
+.shafia_care-age-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* KARTU */
+.shafia_care-age-card {
+  overflow: hidden;
+  border-radius: 18px;
+  transition: transform .3s ease, box-shadow .3s ease;
+  background: #E9DDF0;
+}
+
+.shafia_care-age-card:nth-child(2) {
+  background: #F7E9AE;
+}
+
+.shafia_care-age-card:nth-child(3) {
+  background: #F0DDE2;
+}
+
+.shafia_care-age-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(65, 64, 71, .10);
+}
+
+/* GAMBAR */
+.shafia_care-age-image {
+  width: 100%;
+  height: 235px;
+  overflow: hidden;
+}
+
+.shafia_care-age-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.shafia_care-age-card:hover .shafia_care-age-image img {
+  transform: scale(1.05);
+}
+
+/* INFORMASI KARTU */
+.shafia_care-age-info {
+  padding: 27px 25px 30px;
+}
+
+.shafia_care-age-info .shafia_eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #B85F83;
+}
+
+.shafia_care-age-info h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  color: #414047;
+  margin: 12px 0;
+}
+
+.shafia_care-age-info p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #66616A;
+  min-height: 94px;
+}
+
+.shafia_care-age-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  color: #414047;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.shafia_care-age-info a span {
+  color: #B85F83;
+  font-size: 17px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .shafia_care-age-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .shafia_care-age {
+    padding: 65px 0 !important;
+  }
+
+  .shafia_care-age .shafia_section-heading {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .shafia_care-age-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .shafia_care-age-image {
+    height: 230px;
+  }
+
+  .shafia_care-age-info p {
+    min-height: auto;
+  }
+}
+
+.shafia_care-hero .shafia_eyebrow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shafia_care-hero .shafia_eyebrow a:hover {
+  color: #B85F83;
+}
+
+.shafia_care-hero .shafia_eyebrow {
+  color: #B85F83;
+}
+
+.shafia_care-hero .shafia_eyebrow a {
+  color: #B85F83;
+  text-decoration: none;
+}
+
+.shafia_care-hero .shafia_eyebrow a:hover {
+  color: #414047;
+}
+
+/* FAQ - BACKGROUND ABU-ABU DAN TULISAN GELAP */
+.shafia_faq-section h2 em {
+  color: #B85F83 !important;
+  font-style: normal;
+}
+
+.shafia_faq-section {
+  background: #b8b8bb !important;
+  color: #414047 !important;
+}
+
+.shafia_faq-section * {
+  color: #414047 !important;
+}
+
+/* Tanda plus */
+.shafia_faq-section button span,
+.shafia_faq-section .shafia_faq-icon {
+  color: #B85F83 !important;
+}
+
+/* Garis pemisah */
+.shafia_faq-section button,
+.shafia_faq-section .shafia_faq-item {
+  border-color: #DADADD !important;
+}
+
+/* DUNIA KUCING */
+.shafia_page-heading {
+  background: #E2E2E4;
+}
+
+.shafia_page-heading .shafia_eyebrow {
+  color: #B85F83;
+}
+
+.shafia_page-heading .shafia_eyebrow a {
+  color: #B85F83;
+  text-decoration: none;
+}
+
+.shafia_page-heading h1 {
+  color: #414047;
+}
+
+.shafia_page-heading h1 em {
+  color: #B85F83;
+  font-style: normal;
+}
+
+.shafia_page-heading p {
+  color: #55545A;
+}
+
+.shafia_gallery-card figcaption {
+  background: #F7F6F6;
+  color: #414047;
+}
+
+.shafia_gallery-card figcaption span {
+  color: #B85F83;
+}
+
+.shafia_gallery-card figcaption strong {
+  color: #414047;
+}
+
+
+/* BACKGROUND BULU ABU-ABU MUDA */
+.shafia_page-heading {
+  background-color: #E8E8E8 !important;
+  background-image:
+    linear-gradient(rgba(247, 246, 246, 0.78), rgba(247, 246, 246, 0.78)),
+    url("../bulu-background.png") !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* =================================
+   DUNIA KUCING - GALERI EDITORIAL
+================================= */
+
+.shafia_gallery-grid {
+  width: min(90%, 1200px) !important;
+  margin: 0 auto !important;
+
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-rows: 250px !important;
+  gap: 18px !important;
+}
+
+/* KARTU GALERI */
+.shafia_gallery-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #E2E2E4;
+}
+
+/* FOTO */
+.shafia_gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.shafia_gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+/* FOTO PERTAMA LEBIH TINGGI */
+.shafia_gallery-tall {
+  grid-row: span 2;
+}
+
+/* FOTO TERAKHIR */
+.shafia_gallery-wide {
+  grid-column: span 2;
+}
+
+/* KETERANGAN FOTO */
+.shafia_gallery-card figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 35px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  background: linear-gradient(
+    transparent,
+    rgba(35, 32, 38, 0.78)
+  );
+  color: white;
+}
+
+.shafia_gallery-card figcaption span {
+  color: #F0C4D5;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.shafia_gallery-card figcaption strong {
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 768px) {
+  .shafia_gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 210px !important;
+  }
+
+  .shafia_gallery-tall {
+    grid-row: span 2;
+  }
+
+  .shafia_gallery-wide {
+    grid-column: span 2;
+  }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 480px) {
+  .shafia_gallery-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 260px !important;
+  }
+
+  .shafia_gallery-tall,
+  .shafia_gallery-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* FOTO TAMBAHAN KANAN ATAS */
+.shafia_gallery-top-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* FOTO KANAN BAWAH */
+.shafia_gallery-bottom-right {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* AJAKAN DUNIA KUCING - ABU-ABU MUDA */
+.shafia_lifestyle-note {
+  width: 100%;
+  background: #E2E2E4 !important;
+  background-image: none !important;
+  padding: 85px 0 !important;
+  box-sizing: border-box;
+}
+
+.shafia_lifestyle-note .shafia_container {
+  background: transparent !important;
+}
+
+.shafia_lifestyle-note .shafia_eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_lifestyle-note h2 {
+  color: #414047 !important;
+}
+
+.shafia_lifestyle-note h2 em {
+  color: #B85F83 !important;
+  font-style: normal;
+}
+
+.shafia_lifestyle-note .shafia_btn {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.shafia_lifestyle-note .shafia_btn span {
+  color: #FFFFFF !important;
+}
+
+    /* HALAMAN RAS KUCING */
+    .shafia_breed-page {
+      font-family: 'DM Sans', sans-serif;
+      color: #414047;
+      background: #F7F6F6;
+    }
+
+    .shafia_breed-hero {
+      width: 100%;
+      padding: 75px 5% 85px;
+      box-sizing: border-box;
+      text-align: center;
+      background:
+        linear-gradient(rgba(232,232,232,.88), rgba(232,232,232,.88)),
+        url("bulu-background.png") center/cover;
+    }
+
+    .shafia_breed-breadcrumb {
+      margin-bottom: 25px;
+      color: #B85F83;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+    }
+
+    .shafia_breed-breadcrumb a {
+      color: #77747A;
+      text-decoration: none;
+    }
+
+    .shafia_breed-hero h1 {
+      margin: 0 0 18px;
+      color: #414047;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .shafia_breed-hero h1 span {
+      color: #B85F83;
+    }
+
+    .shafia_breed-hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #66636A;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .shafia_breed-section {
+      width: min(90%, 1200px);
+      margin: 0 auto;
+      padding: 75px 0 90px;
+    }
+
+    .shafia_breed-heading {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .shafia_breed-heading small {
+      color: #B85F83;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .shafia_breed-heading h2 {
+      margin: 12px 0;
+      color: #414047;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(25px, 3vw, 34px);
+      font-weight: 800;
+    }
+
+    .shafia_breed-heading p {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #77747A;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .shafia_breed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .shafia_breed-card {
+      overflow: hidden;
+      background: #FFFFFF;
+      border-radius: 12px;
+      border: 1px solid #EAE7E8;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .shafia_breed-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(65,64,71,.10);
+    }
+
+    .shafia_breed-image {
+      width: 100%;
+      height: 245px;
+      overflow: hidden;
+      background: #E9E5E6;
+    }
+
+    .shafia_breed-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .shafia_breed-card:hover .shafia_breed-image img {
+      transform: scale(1.06);
+    }
+
+    .shafia_breed-info {
+      padding: 23px;
+    }
+
+    .shafia_breed-number {
+      color: #B85F83;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .shafia_breed-info h3 {
+      margin: 9px 0 10px;
+      color: #414047;
+      font-family: 'Manrope', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .shafia_breed-info p {
+      min-height: 68px;
+      margin: 0 0 20px;
+      color: #77747A;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .shafia_breed-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 17px;
+      border-radius: 5px;
+      background: #E9DDE3;
+      color: #914967;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .3s ease;
+    }
+
+    .shafia_breed-button:hover {
+      background: #B85F83;
+      color: #FFFFFF;
+    }
+
+    .shafia_breed-note {
+      margin-top: 45px;
+      padding: 23px 25px;
+      border-left: 4px solid #B85F83;
+      border-radius: 5px;
+      background: #EAE8E9;
+      color: #66636A;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 900px) {
+      .shafia_breed-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .shafia_breed-hero {
+        padding: 60px 6%;
+      }
+
+      .shafia_breed-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shafia_breed-image {
+        height: 240px;
+      }
+
+      .shafia_breed-info p {
+        min-height: auto;
+      }
+    }
+
+    .shafia_breed-breadcrumb {
+  text-align: left !important;
+  width: min(90%, 1200px);
+  margin: 0 auto 25px !important;
+}
+
+
+/* =================================
+   HALAMAN FAKTA KUCING
+================================= */
+
+.shafia_fact-page {
+  width: 100%;
+  background: #F7F6F6;
+  color: #414047;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.shafia_fact-container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+
+/* HERO */
+
+.shafia_fact-hero {
+  width: 100%;
+  padding: 75px 0 85px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(rgba(232,232,232,.88), rgba(232,232,232,.88)),
+    url("../bulu-background.png") center/cover;
+}
+
+.shafia_fact-breadcrumb {
+  margin-bottom: 35px;
+  color: #B85F83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.shafia_fact-breadcrumb a {
+  color: #77747A;
+  text-decoration: none;
+}
+
+.shafia_fact-eyebrow,
+.shafia_fact-heading > span,
+.shafia_fact-detail-heading > span {
+  color: #B85F83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.shafia_fact-hero h1 {
+  max-width: 850px;
+  margin: 17px 0;
+  color: #414047;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.shafia_fact-hero h1 span {
+  display: block;
+  color: #B85F83;
+}
+
+.shafia_fact-hero p {
+  max-width: 650px;
+  margin: 0;
+  color: #66636A;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* BAGIAN DAFTAR FAKTA */
+
+.shafia_fact-section {
+  padding: 80px 0 90px;
+  background: #F7F6F6;
+}
+
+.shafia_fact-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.shafia_fact-heading h2,
+.shafia_fact-detail-heading h2 {
+  margin: 12px 0;
+  color: #414047;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+}
+
+.shafia_fact-heading h2 em {
+  color: #B85F83;
+  font-style: normal;
+}
+
+.shafia_fact-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #77747A;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* GRID KARTU */
+
+.shafia_fact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.shafia_fact-card {
+  overflow: hidden;
+  border: 1px solid #EAE7E8;
+  border-radius: 10px;
+  background: #FFFFFF;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.shafia_fact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(65,64,71,.10);
+}
+
+.shafia_fact-image {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #E9E5E6;
+}
+
+.shafia_fact-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.shafia_fact-card:hover .shafia_fact-image img {
+  transform: scale(1.06);
+}
+
+.shafia_fact-image span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #B85F83;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.shafia_fact-info {
+  padding: 23px;
+}
+
+.shafia_fact-info small {
+  color: #B85F83;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.shafia_fact-info h3 {
+  min-height: 52px;
+  margin: 10px 0;
+  color: #414047;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.shafia_fact-info p {
+  min-height: 85px;
+  margin: 0 0 20px;
+  color: #77747A;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.shafia_fact-info a {
+  display: inline-block;
+  color: #B85F83;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.shafia_fact-info a:hover {
+  color: #81415D;
+}
+
+
+/* PENJELASAN LENGKAP */
+
+.shafia_fact-detail {
+  padding: 80px 0;
+  background: #EAE9EA;
+}
+
+.shafia_fact-detail-heading {
+  margin-bottom: 35px;
+}
+
+.shafia_fact-detail-item {
+  padding: 25px 0;
+  border-bottom: 1px solid #D2CFD1;
+  scroll-margin-top: 100px;
+}
+
+.shafia_fact-detail-item h3 {
+  margin: 0 0 12px;
+  color: #414047;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.shafia_fact-detail-item p {
+  max-width: 900px;
+  margin: 0;
+  color: #66636A;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* CTA */
+
+.shafia_fact-cta {
+  padding: 80px 0;
+  text-align: center;
+  background: #E2E2E4;
+}
+
+.shafia_fact-cta span {
+  color: #B85F83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.shafia_fact-cta h2 {
+  margin: 15px 0;
+  color: #414047;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 800;
+}
+
+.shafia_fact-cta h2 em {
+  color: #B85F83;
+  font-style: normal;
+}
+
+.shafia_fact-cta p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #66636A;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.shafia_fact-cta a {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 5px;
+  background: #B85F83;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.shafia_fact-cta a:hover {
+  background: #914967;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .shafia_fact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .shafia_fact-hero {
+    padding: 60px 0 65px;
+  }
+
+  .shafia_fact-section,
+  .shafia_fact-detail {
+    padding: 60px 0;
+  }
+
+  .shafia_fact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .shafia_fact-image {
+    height: 240px;
+  }
+
+  .shafia_fact-info h3,
+  .shafia_fact-info p {
+    min-height: auto;
+  }
+
+  .shafia_fact-cta {
+    padding: 60px 0;
+  }
+}
+
+.shafia_nav a.active {
+  color: #B85F83 !important;
+}
+
+.shafia_nav a.active::after {
+  width: 100% !important;
+}
+
+.shafia_nav a.active {
+  color: #B85F83 !important;
+}
+
+.shafia_nav a.active::after {
+  width: 100% !important;
+}
+
+.shafia_utility > a:hover::after,
+.shafia_utility > a.is-current::after {
+  width: 100%;
+}
+
+
+.shafia_search-page {
+  min-height: 75vh;
+  padding: 75px 5%;
+  background: #F7F6F6;
+  box-sizing: border-box;
+}
+
+.shafia_search-container {
+  width: min(100%, 1100px);
+  margin: auto;
+}
+
+.shafia_search-back {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: #B85F83;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.shafia_search-eyebrow {
+  color: #B85F83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.shafia_search-container h1 {
+  color: #414047;
+  font-size: clamp(30px, 5vw, 45px);
+  margin: 10px 0;
+}
+
+#shafia_search-message {
+  color: #77747A;
+  margin-bottom: 30px;
+}
+
+.shafia_search-results {
+  display: grid;
+  gap: 15px;
+}
+
+.shafia_search-item {
+  padding: 25px;
+  background: #FFFFFF;
+  border: 1px solid #E5E2E4;
+  border-radius: 10px;
+}
+
+.shafia_search-item h2 {
+  color: #414047;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.shafia_search-item p {
+  color: #66636A;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.shafia_search-item a {
+  color: #B85F83;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shafia_search-item a:hover {
+  text-decoration: underline;
+}
+
+.shafia_search-empty {
+  padding: 30px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  color: #66636A;
+}

@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cerita Whiskas, kecintaan terhadap kucing, dan inspirasi untuk merawat mereka.">
+  <meta name="theme-color" content="#414047">
+  <title>Cerita Kami | Whiskas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <a class="shafia_skip-link" href="#shafia_main">Lewati ke konten</a>
+
+  <!-- HEADER -->
+  <header class="shafia_header" id="shafia_header">
+
+    <div class="shafia_utility">
+      <a href="ras-kucing.html">RAS KUCING</a>
+      <a href="fakta-kucing.html">FAKTA KUCING</a>
+
+      <form class="whiskas-nav-search" action="search.html" method="get" role="search">
+  <input type="search" name="q" placeholder="Cari sesuatu..." aria-label="Cari sesuatu">
+</form>
+    </div>
+
+    <div class="shafia_nav-wrap">
+
+      <a href="index.html" class="whiskas-paw-logo" aria-label="Whiskas beranda">
+        <svg viewBox="0 0 220 190" role="img" aria-label="Logo Whiskas berbentuk paw">
+          <defs>
+            <linearGradient id="pawWhite" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#f4f0ff"/>
+            </linearGradient>
+            <linearGradient id="pawPink" x1="0" y1="0" x2="0.8" y2="1">
+              <stop offset="0%" stop-color="#ffdce5"/>
+              <stop offset="100%" stop-color="#f5a6b5"/>
+            </linearGradient>
+          </defs>
+
+          <path d="M110 178 C85 184 53 178 43 158 C25 153 17 137 22 119 C8 105 16 88 32 82 C28 65 40 49 59 48 C63 26 81 15 98 27 L110 36 L122 27 C139 15 157 26 161 48 C180 49 192 65 188 82 C204 88 212 105 198 119 C203 137 195 153 177 158 C167 178 135 184 110 178Z"
+            fill="url(#pawWhite)" stroke="#b8b6d1" stroke-width="5"/>
+
+          <ellipse cx="48" cy="78" rx="19" ry="25" transform="rotate(-20 48 78)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="86" cy="43" rx="17" ry="25" transform="rotate(-12 86 43)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="134" cy="43" rx="17" ry="25" transform="rotate(12 134 43)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+          <ellipse cx="172" cy="78" rx="19" ry="25" transform="rotate(20 172 78)" fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+
+          <path d="M110 91 C96 91 88 108 75 119 C58 133 69 157 91 157 C101 157 107 152 110 152 C113 152 119 157 129 157 C151 157 162 133 145 119 C132 108 124 91 110 91Z"
+            fill="url(#pawPink)" stroke="#df858e" stroke-width="4"/>
+
+          <ellipse cx="84" cy="38" rx="6" ry="9" fill="#fff" opacity=".65"/>
+          <path d="M85 111 Q110 96 135 111" fill="none" stroke="#fff" stroke-width="4" opacity=".45"/>
+          <text x="110" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="800" fill="#8b527f">whiskas</text>
+        </svg>
+      </a>
+
+      <button class="shafia_menu-toggle" id="shafia_menu-toggle"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+        aria-controls="shafia_nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="shafia_nav" id="shafia_nav" aria-label="Navigasi utama">
+        <a href="about.html" data-page="about.html">Kenapa WHISKAS®</a>
+        <a href="products.html">Produk</a>
+        <a href="nutrition.html" data-page="nutrition.html">Panduan Memberi Makan</a>
+        <a href="cat-care.html">Perawatan Kucing</a>
+        <a href="lifestyle.html" data-page="lifestyle.html">Dunia Kucing</a>
+      </nav>
+
+    </div>
+  </header>
+
+  
+<main id="shafia_main">
+
+  <!-- HERO KENAPA WHISKAS -->
+  <section class="shafia_page-hero shafia_page-hero-purple">
+    <div>
+      <span class="shafia_eyebrow shafia_eyebrow-light">
+        BERANDA / KENAPA WHISKAS
+      </span>
+
+      <h1>
+        Kenapa <em>WHISKAS®?</em>
+      </h1>
+
+      <p>
+        Karena setiap kucing berhak mendapatkan nutrisi yang lengkap,
+        rasa yang lezat, dan perhatian penuh dalam setiap tahap kehidupannya.
+      </p>
+    </div>
+
+<img src="hero-about-whiskas.jpg"
+     alt="Kucing sebagai bagian dari cerita WHISKAS">
+    <span class="shafia_page-hero-shape"></span>
+  </section>
+
+
+  <!-- KERJA SAMA DENGAN WALTHAM -->
+  <section class="shafia_section shafia_container shafia_story-grid">
+    <div>
+      <span class="shafia_eyebrow">NUTRISI DAN KASIH SAYANG</span>
+
+      <h2>
+        Dikembangkan dengan
+        <em>pengetahuan dan kepedulian.</em>
+      </h2>
+    </div>
+
+    <div>
+      <p>
+        WHISKAS® bekerja sama dengan WALTHAM™ Centre for Pet Nutrition
+        atau Pusat Nutrisi Hewan dalam mengembangkan produk yang
+        senantiasa mengutamakan nutrisi dan kasih sayang untuk kucing.
+      </p>
+
+      <p>
+        Melalui pengembangan resep dan perhatian terhadap kebutuhan
+        alami kucing, WHISKAS® menghadirkan pilihan makanan untuk
+        menemani berbagai tahap kehidupan mereka.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- KEUNGGULAN WHISKAS -->
+  <section class="shafia_values whiskas-reasons">
+    <div class="shafia_container">
+
+      <span class="shafia_eyebrow shafia_eyebrow-light">
+        KEUNGGULAN WHISKAS®
+      </span>
+
+      <h2>
+        Nutrisi dan kelezatan.<br>
+        <em>Untuk setiap kucing.</em>
+      </h2>
+
+      <div class="whiskas-reason-grid">
+
+        <!-- NUTRISI LENGKAP -->
+        <article class="whiskas-reason-card">
+          <img src="Complete-Nutrition-01.png"
+               alt="Ilustrasi nutrisi lengkap">
+
+          <span>01 / NUTRISI</span>
+
+          <h3>Nutrisi Lengkap</h3>
+
+          <p>
+            Kucing mempunyai kebutuhan nutrisi yang berbeda dari manusia.
+            Mereka membutuhkan 4 kali lebih banyak protein, 2 kali lebih
+            banyak Vitamin A, serta Taurin untuk melengkapi kebutuhan
+            alaminya.
+          </p>
+
+          <p>
+            Karena itu, WHISKAS® merancang resep 100% lengkap dan seimbang
+            untuk memenuhi kebutuhan kucing dalam berbagai tahap kehidupan.
+          </p>
+
+          <a class="shafia_text-link" href="nutrition.html">
+            info nutrisi <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- RASA YANG LEZAT -->
+        <article class="whiskas-reason-card">
+          <img src="Delicious-Flavours.png"
+               alt="Ilustrasi variasi rasa makanan WHISKAS">
+
+          <span>02 / KELEZATAN</span>
+
+          <h3>Rasa yang Lezat</h3>
+
+          <p>
+            WHISKAS® mengembangkan resep yang tidak hanya mengandung
+            nutrisi penting yang dibutuhkan kucing, tetapi juga menawarkan
+            rasa lezat agar pengalaman makan mereka semakin menyenangkan.
+          </p>
+
+          <p>
+            Berdasarkan materi yang dirujuk, 9 dari 10 kucing menyukai
+            WHISKAS® Pouch.
+          </p>
+
+          <small class="whiskas-reason-note">
+            *Berdasarkan uji coba variasi Ikan Kembung dengan 120 konsumen
+            di Thailand.
+          </small>
+
+          <a class="shafia_text-link" href="nutrition.html">
+            kenalkan rasa baru <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- STANDAR DUNIA -->
+        <article class="whiskas-reason-card">
+          <img src="gobal-standart-logo.png"
+               alt="Logo standar kualitas dunia">
+
+          <span>03 / KUALITAS</span>
+
+          <h3>Standar Dunia</h3>
+
+          <p>
+            Kualitas produk dikembangkan dengan dukungan pengetahuan
+            dari institusi kelas dunia. WHISKAS® bekerja sama dengan
+            dokter hewan dan ilmuwan dari WALTHAM™, pusat nutrisi dan
+            kesejahteraan hewan terkemuka di Inggris.
+          </p>
+
+          <p>
+            Kerja sama ini mendukung pengembangan resep untuk membantu
+            menjaga kehidupan kucing tetap sehat.
+          </p>
+
+          <a class="shafia_text-link" href="#waltham">
+            Kenali WALTHAM™ <span>→</span>
+          </a>
+        </article>
+
+
+        <!-- VARIASI RASA -->
+        <article class="whiskas-reason-card">
+          <img src="whiskas-nutrition-icons-01.png"
+               alt="Ilustrasi ikon nutrisi dan variasi rasa">
+
+          <span>04 / PILIHAN</span>
+
+          <h3>Variasi Rasa</h3>
+
+          <p>
+            WHISKAS® memahami sifat, kebiasaan, serta kebutuhan kucing.
+            Karena itu, tersedia pilihan makanan yang diformulasikan
+            untuk memberikan asupan yang dibutuhkan dengan rasa yang nikmat.
+          </p>
+
+          <a class="shafia_text-link" href="products.html">
+            Lihat variasi kami <span>→</span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WALTHAM -->
+  <section class="shafia_section shafia_container shafia_split"
+           id="waltham">
+
+    <img src="gobal-standart-logo.png"
+         alt="Identitas WALTHAM">
+
+    <div>
+      <span class="shafia_eyebrow">MITRA PENGEMBANGAN NUTRISI</span>
+
+      <h2>
+        Pengetahuan untuk kehidupan
+        <em>kucing yang lebih baik.</em>
+      </h2>
+
+      <p>
+        WALTHAM™ Centre for Pet Nutrition merupakan pusat penelitian
+        nutrisi dan kesejahteraan hewan yang menjadi mitra WHISKAS®
+        dalam mengembangkan produk dengan memperhatikan kebutuhan
+        alami kucing.
+      </p>
+
+      <a href="https://doi.org/10.1242/jeb.049429"
+        class="shafia_btn"
+        target="_blank"
+        rel="noopener noreferrer">
+        Pelajari panduan nutrisi →
+      </a>
+    </div>
+
+  </section>
+
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="shafia_footer">
+
+    <div class="shafia_footer-top">
+
+      <div>
+        <a class="shafia_logo shafia_logo-light" href="index.html">
+          WHISKAS<span>®</span>
+        </a>
+
+        <p>
+          Momen kecil. Cinta yang besar.<br>
+          Untuk setiap kucing yang penuh rasa ingin tahu.
+        </p>
+      </div>
+
+      <div class="shafia_footer-links">
+
+        <div>
+          <strong>Jelajahi</strong>
+          <a href="about.html">Cerita Kami</a>
+          <a href="products.html">Produk Kami</a>
+          <a href="lifestyle.html">Dunia Kucing</a>
+        </div>
+
+        <div>
+          <strong>Temukan</strong>
+          <a href="cat-care.html">Perawatan Kucing</a>
+          <a href="nutrition.html">Panduan Nutrisi</a>
+          <a href="contact.html">Kontak</a>
+        </div>
+
+      </div>
+
+      <a class="shafia_back-top" href="#shafia_header" aria-label="Kembali ke atas">
+        ↑
+      </a>
+
+    </div>
+
+    <div class="shafia_footer-bottom">
+      <span>© 2026 Konsep Website Whiskas</span>
+      <span>Proyek desain ulang akademik · Bukan situs web resmi merek</span>
+    </div>
+
+  </footer>
+
+</body>
+</html>

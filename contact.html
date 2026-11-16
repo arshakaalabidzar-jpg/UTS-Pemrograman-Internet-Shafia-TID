@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Whiskas — inspirasi nutrisi, produk, dan perawatan untuk kehidupan kucing yang lebih bahagia.">
+  <meta name="theme-color" content="#553078">
+  <title>Contact | Whiskas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="shafia_skip-link" href="#shafia_main">Lewati ke konten</a>
+  <header class="shafia_header" id="shafia_header">
+    <div class="shafia_nav-wrap">
+      <a class="shafia_logo" href="index.html" aria-label="Whiskas beranda">WHISKAS<span>®</span></a>
+      <button class="shafia_menu-toggle" id="shafia_menu-toggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="shafia_nav">
+        <span></span><span></span>
+      </button>
+      <nav class="shafia_nav" id="shafia_nav" aria-label="Navigasi utama">
+        <a href="index.html" data-page="index.html">Home</a>
+        <a href="about.html" data-page="about.html">Our Story</a>
+        <a href="products.html" data-page="products.html">Products</a>
+        <a href="lifestyle.html" data-page="lifestyle.html">Cat Life</a>
+        <a href="cat-care.html" data-page="cat-care.html">Cat Care</a>
+        <a href="nutrition.html" data-page="nutrition.html">Nutrition</a>
+        <a class="shafia_nav-contact" href="contact.html" data-page="contact.html">Contact <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="shafia_main">
+
+    <section class="shafia_contact-hero"><div class="shafia_container"><span class="shafia_eyebrow shafia_eyebrow-light">SAY HELLO / 08</span><h1>Let's make<br><em>more moments.</em></h1><p>Have a question, idea, or feedback? Send a note using the form below.</p></div><span class="shafia_contact-star">✳</span></section>
+    <section class="shafia_section shafia_container shafia_contact-grid">
+      <div class="shafia_contact-info"><span class="shafia_eyebrow">GET IN TOUCH</span><h2>We'd love to<br>hear from <em>you.</em></h2><p>Fill in the form and tell us what's on your mind.</p><div class="shafia_contact-detail"><span>PROJECT</span><strong>Whiskas Concept Website</strong></div><div class="shafia_contact-detail"><span>RESPONSE</span><strong>Demo form for academic project</strong></div><div class="shafia_contact-cat">ฅ^•ﻌ•^ฅ</div></div>
+      <form class="shafia_contact-form" id="shafia_contact-form" novalidate>
+        <div class="shafia_form-row"><label for="shafia_name">Your name</label><input id="shafia_name" name="name" type="text" placeholder="e.g. Cat lover" required minlength="2"><small class="shafia_error" data-error="name"></small></div>
+        <div class="shafia_form-row"><label for="shafia_email">Email address</label><input id="shafia_email" name="email" type="email" placeholder="name@example.com" required><small class="shafia_error" data-error="email"></small></div>
+        <div class="shafia_form-row"><label for="shafia_subject">Subject</label><select id="shafia_subject" name="subject" required><option value="">Choose a topic</option><option>Product information</option><option>Cat care</option><option>Feedback</option><option>Other</option></select><small class="shafia_error" data-error="subject"></small></div>
+        <div class="shafia_form-row"><label for="shafia_message">Your message</label><textarea id="shafia_message" name="message" rows="5" placeholder="Write your message here..." required minlength="10"></textarea><small class="shafia_error" data-error="message"></small></div>
+        <button class="shafia_btn shafia_btn-purple shafia_submit" type="submit">Send message <span>↗</span></button>
+        <p class="shafia_form-status" id="shafia_form-status" role="status" aria-live="polite"></p>
+        <p class="shafia_disclaimer">Demo akademik: form ini melakukan validasi di browser dan belum mengirim data ke email/server.</p>
+      </form>
+    </section>
+
+  </main>
+  <footer class="shafia_footer">
+    <div class="shafia_footer-top">
+      <div>
+        <a class="shafia_logo shafia_logo-light" href="index.html">WHISKAS<span>®</span></a>
+        <p>Little moments. Big love.<br>For every curious cat.</p>
+      </div>
+      <div class="shafia_footer-links">
+        <div><strong>Explore</strong><a href="about.html">Our Story</a><a href="products.html">Products</a><a href="lifestyle.html">Cat Life</a></div>
+        <div><strong>Discover</strong><a href="cat-care.html">Cat Care</a><a href="nutrition.html">Nutrition Guide</a><a href="contact.html">Contact</a></div>
+      </div>
+      <a class="shafia_back-top" href="#shafia_header" aria-label="Kembali ke atas">↑</a>
+    </div>
+    <div class="shafia_footer-bottom">
+      <span>© 2026 Whiskas Concept Website</span>
+      <span>Academic redesign project · Not an official brand website</span>
+    </div>
+  </footer>
+</body>
+</html>
