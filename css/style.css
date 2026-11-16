@@ -4200,46 +4200,36 @@ h1 em,h2 em,blockquote em{font-style:normal;color:var(--shafia-yellow)}
   color: #66636A;
 }
 
+/* BACK TO TOP BUTTON */
 .shafia_back-to-top {
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    padding: 0 !important;
 
-.shafia_back-to-top:hover {
-    transform: translateY(-5px);
-}
-
-/* TOMBOL KEMBALI KE ATAS */
-a.shafia_back-to-top {
-    width: 45px !important;
-    height: 45px !important;
-    min-width: 45px !important;
-
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 
-    background: #F2E8E8 !important;
+    background-color: #F2E8E8 !important;
     border: 1px solid #E5D5D5 !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
 
     color: #333333 !important;
-    font-size: 25px !important;
+    font-size: 27px !important;
     font-weight: 600 !important;
-    text-decoration: none !important;
+    line-height: 1 !important;
 
+    text-decoration: none !important;
     box-sizing: border-box !important;
-    cursor: pointer;
-    transition: 0.3s ease;
+    cursor: pointer !important;
+
+    transition: all 0.3s ease !important;
 }
 
-a.shafia_back-to-top:hover {
-    background: #D9BFC3 !important;
+.shafia_back-to-top:hover {
+    background-color: #D9BFC3 !important;
+    border-color: #D9BFC3 !important;
     color: #FFFFFF !important;
     transform: translateY(-4px);
-}
-
-a.shafia_back-to-top span {
-    line-height: 1;
 }
