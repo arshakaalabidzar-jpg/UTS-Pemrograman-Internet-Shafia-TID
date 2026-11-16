@@ -4199,3 +4199,13 @@ h1 em,h2 em,blockquote em{font-style:normal;color:var(--shafia-yellow)}
   border-radius: 10px;
   color: #66636A;
 }
+
+.shafia_back-to-top {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.shafia_back-to-top:hover {
+    transform: translateY(-5px);
+}
