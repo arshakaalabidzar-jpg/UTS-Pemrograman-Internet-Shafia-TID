@@ -4256,3 +4256,7 @@ a.shafia_back-to-top:hover {
 .shafia_social-icon:hover {
   transform: translateY(-4px);
 }
+.shafia_footer-social {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
