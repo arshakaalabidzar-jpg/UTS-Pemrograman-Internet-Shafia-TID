@@ -4265,3 +4265,7 @@ a.shafia_back-to-top:hover {
 .shafia_footer-bottom {
   margin-top: 50px !important;
 }
+.shafia_footer-social {
+  position: relative !important;
+  top: -15px !important;
+}
