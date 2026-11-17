@@ -4233,75 +4233,26 @@ a.shafia_back-to-top:hover {
     transform: translateY(-4px);
 }
 
-.shafia_footer-social {
-  margin-top: 30px;
-}
-
-.shafia_footer-social h3 {
-  color: #FFFFFF;
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
 .shafia_social-links {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.shafia_social-button {
-  display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 11px 18px;
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 30px;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 13px;
-  transition: .3s ease;
+  gap: 14px;
 }
 
-.shafia_social-button:hover {
-  background: #B85F83;
-  border-color: #B85F83;
-  color: #FFFFFF;
-}
 .shafia_social-icon {
-  width: 42px;
-  height: 42px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 50%;
-  color: #FFFFFF;
-  font-size: 19px;
+  width: 48px;
+  height: 48px;
   text-decoration: none;
-  transition: .3s ease;
+  transition: transform .3s ease;
+}
+
+.shafia_social-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .shafia_social-icon:hover {
-  background: #B85F83;
-  border-color: #B85F83;
-  color: #FFFFFF;
-  transform: translateY(-3px);
-}
-.shafia_social-icon {
-  width: 42px;
-  height: 42px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 50%;
-  color: #FFFFFF;
-  text-decoration: none;
-  transition: .3s ease;
-}
-
-.shafia_social-icon:hover {
-  background: #B85F83;
-  border-color: #B85F83;
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
