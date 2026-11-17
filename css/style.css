@@ -4522,3 +4522,192 @@ a.shafia_back-to-top:hover {
         flex-direction: column;
       }
     }
+
+/* =========================================
+   CONTACT PAGE - FINAL WHISKAS THEME
+   Abu-abu, putih, dan dusty pink
+========================================= */
+
+.shafia_contact-page {
+  min-height: 100vh;
+  padding: 45px 5% 60px;
+  background:
+    linear-gradient(
+      rgba(232,232,232,.88),
+      rgba(232,232,232,.94)
+    ),
+    url("../bulu-background.png") center/cover fixed;
+  color: #414047;
+}
+
+/* HERO CONTACT */
+
+.shafia_contact-heading {
+  padding: 55px 60px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.8);
+  background:
+    linear-gradient(
+      rgba(247,246,246,.86),
+      rgba(247,246,246,.92)
+    ),
+    url("../bulu-background.png") center/cover;
+  box-shadow: 0 12px 35px rgba(65,64,71,.06);
+}
+
+.shafia_contact-heading .shafia_contact-eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_contact-heading h1 {
+  color: #414047 !important;
+  font-size: clamp(38px, 5vw, 62px) !important;
+  line-height: 1.15 !important;
+}
+
+.shafia_contact-heading h1 em {
+  color: #B85F83 !important;
+}
+
+.shafia_contact-heading p {
+  color: #66636A !important;
+  line-height: 1.9;
+}
+
+/* GRID */
+
+.shafia_contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* INFORMATION CARD */
+
+.shafia_contact-info {
+  padding: 38px;
+  background: #F7F6F6;
+  border: 1px solid #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(65,64,71,.06);
+}
+
+.shafia_contact-info .shafia_contact-eyebrow {
+  color: #B85F83 !important;
+}
+
+.shafia_contact-info h2 {
+  color: #414047 !important;
+  font-size: clamp(27px, 3vw, 38px);
+  line-height: 1.25;
+}
+
+.shafia_contact-info h2 em {
+  color: #B85F83 !important;
+}
+
+.shafia_contact-info > p {
+  color: #66636A !important;
+  line-height: 1.8;
+}
+
+.shafia_contact-detail {
+  border-color: #DFDCDF !important;
+}
+
+.shafia_contact-detail span {
+  color: #B85F83 !important;
+}
+
+.shafia_contact-detail strong {
+  color: #414047 !important;
+}
+
+.shafia_contact-cat {
+  color: #B85F83 !important;
+}
+
+/* FORM CARD */
+
+.shafia_contact-form {
+  padding: 38px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #F0EDEF;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(65,64,71,.08) !important;
+}
+
+.shafia_form-row label {
+  color: #414047 !important;
+}
+
+.shafia_form-row input,
+.shafia_form-row select,
+.shafia_form-row textarea {
+  background: #FAF9F9 !important;
+  color: #414047 !important;
+  border: 1px solid #DEDADF !important;
+  border-radius: 7px !important;
+}
+
+.shafia_form-row input:focus,
+.shafia_form-row select:focus,
+.shafia_form-row textarea:focus {
+  border-color: #B85F83 !important;
+  box-shadow: 0 0 0 3px rgba(184,95,131,.08);
+}
+
+.shafia_contact-submit {
+  background: #B85F83 !important;
+  color: #FFFFFF !important;
+  border-radius: 7px;
+}
+
+.shafia_contact-submit:hover {
+  background: #9F4D70 !important;
+}
+
+.shafia_form-status {
+  color: #477A5A !important;
+}
+
+.shafia_disclaimer {
+  color: #89858A !important;
+}
+
+/* COPYRIGHT */
+
+.shafia_contact-bottom {
+  border-color: #D4D1D3 !important;
+  color: #77747A !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .shafia_contact-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .shafia_contact-heading {
+    padding: 38px 28px;
+  }
+
+  .shafia_contact-info,
+  .shafia_contact-form {
+    padding: 27px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .shafia_contact-page {
+    padding: 25px 5% 40px;
+  }
+
+  .shafia_contact-heading {
+    padding: 30px 22px;
+  }
+}
