@@ -4232,3 +4232,38 @@ a.shafia_back-to-top:hover {
     color: #FFFFFF !important;
     transform: translateY(-4px);
 }
+
+.shafia_footer-social {
+  margin-top: 30px;
+}
+
+.shafia_footer-social h3 {
+  color: #FFFFFF;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.shafia_social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.shafia_social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 13px;
+  transition: .3s ease;
+}
+
+.shafia_social-button:hover {
+  background: #B85F83;
+  border-color: #B85F83;
+  color: #FFFFFF;
+}
