@@ -4257,6 +4257,11 @@ a.shafia_back-to-top:hover {
   transform: translateY(-4px);
 }
 .shafia_footer-social {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 10px !important;
+  margin-bottom: 35px !important;
+  padding-bottom: 15px !important;
+}
+
+.shafia_footer-bottom {
+  margin-top: 15px !important;
 }
