@@ -4269,3 +4269,17 @@ a.shafia_back-to-top:hover {
   position: relative !important;
   top: -15px !important;
 }
+.shafia_social-facebook {
+  background-color: #555555 !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden;
+}
+
+.shafia_social-facebook svg {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
