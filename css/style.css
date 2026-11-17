@@ -4283,3 +4283,242 @@ a.shafia_back-to-top:hover {
   height: 48px;
   display: block;
 }
+
+    .shafia_contact-page {
+      min-height: 100vh;
+      padding: 45px 5% 80px;
+      box-sizing: border-box;
+      background: #E8E8E8;
+      color: #414047;
+    }
+
+    .shafia_contact-container {
+      width: min(100%, 1100px);
+      margin: 0 auto;
+    }
+
+    .shafia_contact-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 55px;
+      color: #B85F83;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .3s ease;
+    }
+
+    .shafia_contact-back:hover {
+      transform: translateX(-5px);
+    }
+
+    .shafia_contact-heading {
+      margin-bottom: 55px;
+    }
+
+    .shafia_contact-eyebrow {
+      color: #B85F83;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .shafia_contact-heading h1 {
+      margin: 15px 0;
+      color: #414047;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(36px, 6vw, 65px);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .shafia_contact-heading h1 em {
+      color: #B85F83;
+      font-style: normal;
+    }
+
+    .shafia_contact-heading p {
+      max-width: 580px;
+      color: #66636A;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .shafia_contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .shafia_contact-info h2 {
+      margin: 15px 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.25;
+      color: #414047;
+    }
+
+    .shafia_contact-info h2 em {
+      color: #B85F83;
+      font-style: normal;
+    }
+
+    .shafia_contact-info > p {
+      color: #66636A;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .shafia_contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding: 20px 0;
+      border-bottom: 1px solid #D4D1D3;
+    }
+
+    .shafia_contact-detail span {
+      color: #B85F83;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .shafia_contact-detail strong {
+      color: #414047;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .shafia_contact-cat {
+      margin-top: 35px;
+      color: #B85F83;
+      font-size: 35px;
+    }
+
+    .shafia_contact-form {
+      padding: 35px;
+      background: #F7F6F6;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    .shafia_form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px;
+    }
+
+    .shafia_form-row label {
+      color: #414047;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .shafia_form-row input,
+    .shafia_form-row select,
+    .shafia_form-row textarea {
+      width: 100%;
+      padding: 14px 15px;
+      box-sizing: border-box;
+      border: 1px solid #DAD7DA;
+      border-radius: 6px;
+      background: #FFFFFF;
+      color: #414047;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: border .3s ease;
+    }
+
+    .shafia_form-row input:focus,
+    .shafia_form-row select:focus,
+    .shafia_form-row textarea:focus {
+      border-color: #B85F83;
+    }
+
+    .shafia_form-row textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .shafia_form-row input::placeholder,
+    .shafia_form-row textarea::placeholder {
+      color: #AAA6AA;
+    }
+
+    .shafia_error {
+      color: #C0395D;
+      font-size: 11px;
+    }
+
+    .shafia_contact-submit {
+      width: 100%;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #B85F83;
+      color: #FFFFFF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s ease;
+    }
+
+    .shafia_contact-submit:hover {
+      background: #9F4D70;
+      transform: translateY(-2px);
+    }
+
+    .shafia_form-status {
+      margin-top: 15px;
+      color: #477A5A;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .shafia_disclaimer {
+      margin-top: 18px;
+      color: #89858A;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .shafia_contact-bottom {
+      margin-top: 70px;
+      padding-top: 22px;
+      border-top: 1px solid #D4D1D3;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #89858A;
+      font-size: 11px;
+    }
+
+    @media (max-width: 750px) {
+      .shafia_contact-page {
+        padding: 30px 6% 55px;
+      }
+
+      .shafia_contact-back {
+        margin-bottom: 40px;
+      }
+
+      .shafia_contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .shafia_contact-form {
+        padding: 25px 20px;
+      }
+
+      .shafia_contact-bottom {
+        flex-direction: column;
+      }
+    }
