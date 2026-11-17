@@ -1,69 +1,453 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Whiskas — inspirasi nutrisi, produk, dan perawatan untuk kehidupan kucing yang lebih bahagia.">
-  <meta name="theme-color" content="#553078">
-  <title>Contact | Whiskas</title>
+
+  <meta name="description" content="Hubungi WHISKAS Concept Website untuk menyampaikan pertanyaan, saran, dan masukan.">
+  <meta name="theme-color" content="#414047">
+
+  <title>Kontak | WHISKAS®</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+
+  <style>
+    .shafia_contact-page {
+      min-height: 100vh;
+      padding: 45px 5% 80px;
+      box-sizing: border-box;
+      background: #E8E8E8;
+      color: #414047;
+    }
+
+    .shafia_contact-container {
+      width: min(100%, 1100px);
+      margin: 0 auto;
+    }
+
+    .shafia_contact-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 55px;
+      color: #B85F83;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .3s ease;
+    }
+
+    .shafia_contact-back:hover {
+      transform: translateX(-5px);
+    }
+
+    .shafia_contact-heading {
+      margin-bottom: 55px;
+    }
+
+    .shafia_contact-eyebrow {
+      color: #B85F83;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .shafia_contact-heading h1 {
+      margin: 15px 0;
+      color: #414047;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(36px, 6vw, 65px);
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .shafia_contact-heading h1 em {
+      color: #B85F83;
+      font-style: normal;
+    }
+
+    .shafia_contact-heading p {
+      max-width: 580px;
+      color: #66636A;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .shafia_contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .shafia_contact-info h2 {
+      margin: 15px 0;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.25;
+      color: #414047;
+    }
+
+    .shafia_contact-info h2 em {
+      color: #B85F83;
+      font-style: normal;
+    }
+
+    .shafia_contact-info > p {
+      color: #66636A;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .shafia_contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding: 20px 0;
+      border-bottom: 1px solid #D4D1D3;
+    }
+
+    .shafia_contact-detail span {
+      color: #B85F83;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .shafia_contact-detail strong {
+      color: #414047;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .shafia_contact-cat {
+      margin-top: 35px;
+      color: #B85F83;
+      font-size: 35px;
+    }
+
+    .shafia_contact-form {
+      padding: 35px;
+      background: #F7F6F6;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    .shafia_form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 22px;
+    }
+
+    .shafia_form-row label {
+      color: #414047;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .shafia_form-row input,
+    .shafia_form-row select,
+    .shafia_form-row textarea {
+      width: 100%;
+      padding: 14px 15px;
+      box-sizing: border-box;
+      border: 1px solid #DAD7DA;
+      border-radius: 6px;
+      background: #FFFFFF;
+      color: #414047;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: border .3s ease;
+    }
+
+    .shafia_form-row input:focus,
+    .shafia_form-row select:focus,
+    .shafia_form-row textarea:focus {
+      border-color: #B85F83;
+    }
+
+    .shafia_form-row textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .shafia_form-row input::placeholder,
+    .shafia_form-row textarea::placeholder {
+      color: #AAA6AA;
+    }
+
+    .shafia_error {
+      color: #C0395D;
+      font-size: 11px;
+    }
+
+    .shafia_contact-submit {
+      width: 100%;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #B85F83;
+      color: #FFFFFF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s ease;
+    }
+
+    .shafia_contact-submit:hover {
+      background: #9F4D70;
+      transform: translateY(-2px);
+    }
+
+    .shafia_form-status {
+      margin-top: 15px;
+      color: #477A5A;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .shafia_disclaimer {
+      margin-top: 18px;
+      color: #89858A;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .shafia_contact-bottom {
+      margin-top: 70px;
+      padding-top: 22px;
+      border-top: 1px solid #D4D1D3;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #89858A;
+      font-size: 11px;
+    }
+
+    @media (max-width: 750px) {
+      .shafia_contact-page {
+        padding: 30px 6% 55px;
+      }
+
+      .shafia_contact-back {
+        margin-bottom: 40px;
+      }
+
+      .shafia_contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .shafia_contact-form {
+        padding: 25px 20px;
+      }
+
+      .shafia_contact-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <a class="shafia_skip-link" href="#shafia_main">Lewati ke konten</a>
-  <header class="shafia_header" id="shafia_header">
-    <div class="shafia_nav-wrap">
-      <a class="shafia_logo" href="index.html" aria-label="Whiskas beranda">WHISKAS<span>®</span></a>
-      <button class="shafia_menu-toggle" id="shafia_menu-toggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="shafia_nav">
-        <span></span><span></span>
-      </button>
-      <nav class="shafia_nav" id="shafia_nav" aria-label="Navigasi utama">
-        <a href="index.html" data-page="index.html">Home</a>
-        <a href="about.html" data-page="about.html">Our Story</a>
-        <a href="products.html" data-page="products.html">Products</a>
-        <a href="lifestyle.html" data-page="lifestyle.html">Cat Life</a>
-        <a href="cat-care.html" data-page="cat-care.html">Cat Care</a>
-        <a href="nutrition.html" data-page="nutrition.html">Nutrition</a>
-        <a class="shafia_nav-contact" href="contact.html" data-page="contact.html">Contact <span>↗</span></a>
-      </nav>
+
+  <main class="shafia_contact-page">
+    <div class="shafia_contact-container">
+
+      <a href="index.html" class="shafia_contact-back">
+        ← Kembali ke Beranda
+      </a>
+
+      <section class="shafia_contact-heading">
+        <span class="shafia_contact-eyebrow">
+          HUBUNGI KAMI
+        </span>
+
+        <h1>
+          Ada yang ingin<br>
+          <em>kamu sampaikan?</em>
+        </h1>
+
+        <p>
+          Punya pertanyaan, saran, atau masukan seputar informasi
+          dan konten website ini? Kami senang mendengar pendapat kamu.
+        </p>
+      </section>
+
+      <section class="shafia_contact-grid">
+
+        <div class="shafia_contact-info">
+          <span class="shafia_contact-eyebrow">
+            INFORMASI KONTAK
+          </span>
+
+          <h2>
+            Mari berbagi<br>
+            cerita bersama <em>kami.</em>
+          </h2>
+
+          <p>
+            Gunakan formulir di samping untuk menyampaikan
+            pertanyaan atau pesan yang ingin kamu sampaikan.
+          </p>
+
+          <div class="shafia_contact-detail">
+            <span>NAMA WEBSITE</span>
+            <strong>WHISKAS® Concept Website</strong>
+          </div>
+
+          <div class="shafia_contact-detail">
+            <span>JENIS WEBSITE</span>
+            <strong>Proyek Akademik Pemrograman Internet</strong>
+          </div>
+
+          <div class="shafia_contact-detail">
+            <span>LAYANAN</span>
+            <strong>Pertanyaan, saran, dan masukan</strong>
+          </div>
+
+          <div class="shafia_contact-cat">
+            ฅ^•ﻌ•^ฅ
+          </div>
+        </div>
+
+        <form class="shafia_contact-form"
+              id="shafia_contact-form"
+              novalidate>
+
+          <div class="shafia_form-row">
+            <label for="shafia_name">Nama Lengkap</label>
+            <input
+              id="shafia_name"
+              name="name"
+              type="text"
+              placeholder="Masukkan nama kamu"
+              required
+              minlength="2">
+            <small class="shafia_error" data-error="name"></small>
+          </div>
+
+          <div class="shafia_form-row">
+            <label for="shafia_email">Alamat Email</label>
+            <input
+              id="shafia_email"
+              name="email"
+              type="email"
+              placeholder="nama@email.com"
+              required>
+            <small class="shafia_error" data-error="email"></small>
+          </div>
+
+          <div class="shafia_form-row">
+            <label for="shafia_subject">Topik Pesan</label>
+            <select id="shafia_subject" name="subject" required>
+              <option value="">Pilih topik pesan</option>
+              <option value="Informasi Produk">Informasi Produk</option>
+              <option value="Perawatan Kucing">Perawatan Kucing</option>
+              <option value="Nutrisi Kucing">Nutrisi Kucing</option>
+              <option value="Saran dan Masukan">Saran dan Masukan</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+            <small class="shafia_error" data-error="subject"></small>
+          </div>
+
+          <div class="shafia_form-row">
+            <label for="shafia_message">Isi Pesan</label>
+            <textarea
+              id="shafia_message"
+              name="message"
+              rows="5"
+              placeholder="Tuliskan pesan kamu di sini..."
+              required
+              minlength="10"></textarea>
+            <small class="shafia_error" data-error="message"></small>
+          </div>
+
+          <button class="shafia_contact-submit" type="submit">
+            Kirim Pesan ↗
+          </button>
+
+          <p class="shafia_form-status"
+             id="shafia_form-status"
+             role="status"
+             aria-live="polite"></p>
+
+          <p class="shafia_disclaimer">
+            Catatan: Formulir ini merupakan simulasi untuk proyek akademik.
+            Data belum dikirim ke email atau server.
+          </p>
+
+        </form>
+
+      </section>
+
+      <div class="shafia_contact-bottom">
+        <span>© 2026 WHISKAS® Concept Website</span>
+        <span>Proyek desain ulang akademik · Bukan situs resmi merek</span>
+      </div>
+
     </div>
-  </header>
-  <main id="shafia_main">
-
-    <section class="shafia_contact-hero"><div class="shafia_container"><span class="shafia_eyebrow shafia_eyebrow-light">SAY HELLO / 08</span><h1>Let's make<br><em>more moments.</em></h1><p>Have a question, idea, or feedback? Send a note using the form below.</p></div><span class="shafia_contact-star">✳</span></section>
-    <section class="shafia_section shafia_container shafia_contact-grid">
-      <div class="shafia_contact-info"><span class="shafia_eyebrow">GET IN TOUCH</span><h2>We'd love to<br>hear from <em>you.</em></h2><p>Fill in the form and tell us what's on your mind.</p><div class="shafia_contact-detail"><span>PROJECT</span><strong>Whiskas Concept Website</strong></div><div class="shafia_contact-detail"><span>RESPONSE</span><strong>Demo form for academic project</strong></div><div class="shafia_contact-cat">ฅ^•ﻌ•^ฅ</div></div>
-      <form class="shafia_contact-form" id="shafia_contact-form" novalidate>
-        <div class="shafia_form-row"><label for="shafia_name">Your name</label><input id="shafia_name" name="name" type="text" placeholder="e.g. Cat lover" required minlength="2"><small class="shafia_error" data-error="name"></small></div>
-        <div class="shafia_form-row"><label for="shafia_email">Email address</label><input id="shafia_email" name="email" type="email" placeholder="name@example.com" required><small class="shafia_error" data-error="email"></small></div>
-        <div class="shafia_form-row"><label for="shafia_subject">Subject</label><select id="shafia_subject" name="subject" required><option value="">Choose a topic</option><option>Product information</option><option>Cat care</option><option>Feedback</option><option>Other</option></select><small class="shafia_error" data-error="subject"></small></div>
-        <div class="shafia_form-row"><label for="shafia_message">Your message</label><textarea id="shafia_message" name="message" rows="5" placeholder="Write your message here..." required minlength="10"></textarea><small class="shafia_error" data-error="message"></small></div>
-        <button class="shafia_btn shafia_btn-purple shafia_submit" type="submit">Send message <span>↗</span></button>
-        <p class="shafia_form-status" id="shafia_form-status" role="status" aria-live="polite"></p>
-        <p class="shafia_disclaimer">Demo akademik: form ini melakukan validasi di browser dan belum mengirim data ke email/server.</p>
-      </form>
-    </section>
-
   </main>
-  <footer class="shafia_footer">
-    <div class="shafia_footer-top">
-      <div>
-        <a class="shafia_logo shafia_logo-light" href="index.html">WHISKAS<span>®</span></a>
-        <p>Little moments. Big love.<br>For every curious cat.</p>
-      </div>
-      <div class="shafia_footer-links">
-        <div><strong>Explore</strong><a href="about.html">Our Story</a><a href="products.html">Products</a><a href="lifestyle.html">Cat Life</a></div>
-        <div><strong>Discover</strong><a href="cat-care.html">Cat Care</a><a href="nutrition.html">Nutrition Guide</a><a href="contact.html">Contact</a></div>
-      </div>
-      <a class="shafia_back-top" href="#shafia_header" aria-label="Kembali ke atas">↑</a>
-    </div>
-    <div class="shafia_footer-bottom">
-      <span>© 2026 Whiskas Concept Website</span>
-      <span>Academic redesign project · Not an official brand website</span>
-    </div>
-  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("shafia_contact-form");
+      const status = document.getElementById("shafia_form-status");
+
+      const fields = {
+        name: document.getElementById("shafia_name"),
+        email: document.getElementById("shafia_email"),
+        subject: document.getElementById("shafia_subject"),
+        message: document.getElementById("shafia_message")
+      };
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let valid = true;
+
+        Object.keys(fields).forEach(function (key) {
+          const field = fields[key];
+          const error = document.querySelector('[data-error="' + key + '"]');
+
+          error.textContent = "";
+
+          if (!field.value.trim()) {
+            error.textContent = "Bagian ini wajib diisi.";
+            valid = false;
+          } else if (key === "name" && field.value.trim().length < 2) {
+            error.textContent = "Nama minimal 2 karakter.";
+            valid = false;
+          } else if (key === "email" && !field.validity.valid) {
+            error.textContent = "Masukkan alamat email yang valid.";
+            valid = false;
+          } else if (key === "message" && field.value.trim().length < 10) {
+            error.textContent = "Pesan minimal 10 karakter.";
+            valid = false;
+          }
+        });
+
+        if (!valid) {
+          status.textContent = "";
+          return;
+        }
+
+        status.textContent =
+          "Terima kasih! Pesan berhasil divalidasi. Formulir ini masih berupa simulasi akademik.";
+
+        form.reset();
+      });
+    });
+  </script>
+
 </body>
 </html>
