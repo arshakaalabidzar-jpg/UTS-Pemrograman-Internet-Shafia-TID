@@ -19,144 +19,173 @@
   
 </head>
 
+
 <body>
 
   <main class="shafia_contact-page">
+
     <div class="shafia_contact-container">
 
       <a href="index.html" class="shafia_contact-back">
-        ← Kembali ke Beranda
+        ← Kembali ke Dashboard
       </a>
 
-      <section class="shafia_contact-heading">
-        <span class="shafia_contact-eyebrow">
-          HUBUNGI KAMI
-        </span>
+      <div class="shafia_contact-layout">
 
-        <h1>
-          Ada yang ingin<br>
-          <em>kamu sampaikan?</em>
-        </h1>
+        <!-- BAGIAN KIRI -->
+        <section class="shafia_contact-intro">
 
-        <p>
-          Punya pertanyaan, saran, atau masukan seputar informasi
-          dan konten website ini? Kami senang mendengar pendapat kamu.
-        </p>
-      </section>
-
-      <section class="shafia_contact-grid">
-
-        <div class="shafia_contact-info">
-          <span class="shafia_contact-eyebrow">
-            INFORMASI KONTAK
+          <span class="shafia_contact-label">
+            ✉ HUBUNGI KAMI
           </span>
 
-          <h2>
-            Mari berbagi<br>
-            cerita bersama <em>kami.</em>
-          </h2>
+          <h1>
+            Ada yang ingin<br>
+            <em>kamu sampaikan?</em>
+          </h1>
 
-          <p>
-            Gunakan formulir di samping untuk menyampaikan
-            pertanyaan atau pesan yang ingin kamu sampaikan.
+          <p class="shafia_contact-description">
+            Kami selalu mendengarkan! Silakan hubungi kami
+            untuk pertanyaan, saran, atau masukan seputar
+            WHISKAS® dan dunia kucing.
           </p>
 
-          <div class="shafia_contact-detail">
-            <span>NAMA WEBSITE</span>
-            <strong>WHISKAS® Concept Website</strong>
+          <div class="shafia_contact-highlights">
+
+            <div class="shafia_contact-highlight">
+              <span>✉</span>
+              <p>Kami siap<br>membantu</p>
+            </div>
+
+            <div class="shafia_contact-highlight">
+              <span>🐾</span>
+              <p>Untuk kucing<br>yang lebih bahagia</p>
+            </div>
+
+            <div class="shafia_contact-highlight">
+              <span>♡</span>
+              <p>Bersama<br>WHISKAS®</p>
+            </div>
+
           </div>
 
-          <div class="shafia_contact-detail">
-            <span>JENIS WEBSITE</span>
-            <strong>Proyek Akademik Pemrograman Internet</strong>
+          <div class="shafia_contact-decoration">
+            🐾
           </div>
 
-          <div class="shafia_contact-detail">
-            <span>LAYANAN</span>
-            <strong>Pertanyaan, saran, dan masukan</strong>
+        </section>
+
+
+        <!-- BAGIAN KANAN: FORMULIR -->
+        <section class="shafia_contact-card">
+
+          <div class="shafia_contact-card-heading">
+            <div class="shafia_contact-mail-icon">✉</div>
+
+            <div>
+              <h2>Formulir Kontak</h2>
+              <p>
+                Isi formulir di bawah ini, dan sampaikan
+                pesan kamu kepada kami.
+              </p>
+            </div>
+
+            <span class="shafia_contact-card-paw">🐾</span>
           </div>
 
-          <div class="shafia_contact-cat">
-            ฅ^•ﻌ•^ฅ
-          </div>
-        </div>
+          <form
+            class="shafia_contact-form"
+            id="shafia_contact-form"
+            novalidate
+          >
 
-        <form class="shafia_contact-form"
-              id="shafia_contact-form"
-              novalidate>
+            <div class="shafia_form-row">
+              <label for="shafia_name">Nama Lengkap <span>*</span></label>
+              <input
+                id="shafia_name"
+                name="name"
+                type="text"
+                placeholder="Masukkan nama kamu..."
+                required
+                minlength="2"
+              >
+              <small class="shafia_error" data-error="name"></small>
+            </div>
 
-          <div class="shafia_form-row">
-            <label for="shafia_name">Nama Lengkap</label>
-            <input
-              id="shafia_name"
-              name="name"
-              type="text"
-              placeholder="Masukkan nama kamu"
-              required
-              minlength="2">
-            <small class="shafia_error" data-error="name"></small>
-          </div>
+            <div class="shafia_form-row">
+              <label for="shafia_email">Email Anda <span>*</span></label>
+              <input
+                id="shafia_email"
+                name="email"
+                type="email"
+                placeholder="contoh@email.com"
+                required
+              >
+              <small class="shafia_error" data-error="email"></small>
+            </div>
 
-          <div class="shafia_form-row">
-            <label for="shafia_email">Alamat Email</label>
-            <input
-              id="shafia_email"
-              name="email"
-              type="email"
-              placeholder="nama@email.com"
-              required>
-            <small class="shafia_error" data-error="email"></small>
-          </div>
+            <div class="shafia_form-row">
+              <label for="shafia_subject">Subjek <span>*</span></label>
+              <select id="shafia_subject" name="subject" required>
+                <option value="">Pilih topik</option>
+                <option value="Informasi Produk">Informasi Produk</option>
+                <option value="Nutrisi Kucing">Nutrisi Kucing</option>
+                <option value="Perawatan Kucing">Perawatan Kucing</option>
+                <option value="Saran dan Masukan">Saran dan Masukan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+              <small class="shafia_error" data-error="subject"></small>
+            </div>
 
-          <div class="shafia_form-row">
-            <label for="shafia_subject">Topik Pesan</label>
-            <select id="shafia_subject" name="subject" required>
-              <option value="">Pilih topik pesan</option>
-              <option value="Informasi Produk">Informasi Produk</option>
-              <option value="Perawatan Kucing">Perawatan Kucing</option>
-              <option value="Nutrisi Kucing">Nutrisi Kucing</option>
-              <option value="Saran dan Masukan">Saran dan Masukan</option>
-              <option value="Lainnya">Lainnya</option>
-            </select>
-            <small class="shafia_error" data-error="subject"></small>
-          </div>
+            <div class="shafia_form-row">
+              <label for="shafia_message">Pesan <span>*</span></label>
+              <textarea
+                id="shafia_message"
+                name="message"
+                rows="4"
+                placeholder="Tuliskan pesan kamu di sini..."
+                required
+                minlength="10"
+              ></textarea>
+              <small class="shafia_error" data-error="message"></small>
+            </div>
 
-          <div class="shafia_form-row">
-            <label for="shafia_message">Isi Pesan</label>
-            <textarea
-              id="shafia_message"
-              name="message"
-              rows="5"
-              placeholder="Tuliskan pesan kamu di sini..."
-              required
-              minlength="10"></textarea>
-            <small class="shafia_error" data-error="message"></small>
-          </div>
+            <div class="shafia_contact-form-bottom">
+              <button type="submit" class="shafia_contact-submit">
+                ✈ Kirim Pesan <span>→</span>
+              </button>
 
-          <button class="shafia_contact-submit" type="submit">
-            Kirim Pesan ↗
-          </button>
+              <div class="shafia_contact-security">
+                <span>✓</span>
+                <p>Data kamu digunakan hanya untuk simulasi formulir ini.</p>
+              </div>
+            </div>
 
-          <p class="shafia_form-status"
-             id="shafia_form-status"
-             role="status"
-             aria-live="polite"></p>
+            <p
+              class="shafia_form-status"
+              id="shafia_form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
 
-          <p class="shafia_disclaimer">
-            Catatan: Formulir ini merupakan simulasi untuk proyek akademik.
-            Data belum dikirim ke email atau server.
-          </p>
+            <p class="shafia_disclaimer">
+              Formulir ini merupakan bagian dari proyek akademik
+              dan belum mengirimkan data ke email atau server.
+            </p>
 
-        </form>
+          </form>
 
-      </section>
+        </section>
+
+      </div>
 
       <div class="shafia_contact-bottom">
-        <span>© 2026 WHISKAS® Concept Website</span>
+        © 2026 WHISKAS® Concept Website
         <span>Proyek desain ulang akademik · Bukan situs resmi merek</span>
       </div>
 
     </div>
+
   </main>
 
   <script>
@@ -176,9 +205,10 @@
 
         let valid = true;
 
-        Object.keys(fields).forEach(function (key) {
-          const field = fields[key];
-          const error = document.querySelector('[data-error="' + key + '"]');
+        Object.entries(fields).forEach(([key, field]) => {
+          const error = document.querySelector(
+            '[data-error="' + key + '"]'
+          );
 
           error.textContent = "";
 
@@ -189,7 +219,7 @@
             error.textContent = "Nama minimal 2 karakter.";
             valid = false;
           } else if (key === "email" && !field.validity.valid) {
-            error.textContent = "Masukkan alamat email yang valid.";
+            error.textContent = "Masukkan email yang valid.";
             valid = false;
           } else if (key === "message" && field.value.trim().length < 10) {
             error.textContent = "Pesan minimal 10 karakter.";
@@ -203,7 +233,7 @@
         }
 
         status.textContent =
-          "Terima kasih! Pesan berhasil divalidasi. Formulir ini masih berupa simulasi akademik.";
+          "Terima kasih! Formulir berhasil divalidasi.";
 
         form.reset();
       });
@@ -211,4 +241,6 @@
   </script>
 
 </body>
+</html>
+
 </html>
