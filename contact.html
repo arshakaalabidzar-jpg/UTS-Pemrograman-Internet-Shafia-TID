@@ -99,11 +99,16 @@
             <span class="shafia_contact-card-paw">🐾</span>
           </div>
 
-          <form
-            class="shafia_contact-form"
-            id="shafia_contact-form"
-            novalidate
-          >
+<form
+  class="shafia_contact-form"
+  id="shafia_contact-form"
+  action="https://formsubmit.co/EMAILKAMU@gmail.com"
+  method="POST"
+  novalidate
+> 
+  <input type="hidden" name="_subject" value="Pesan Baru dari Website WHISKAS">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
 
             <div class="shafia_form-row">
               <label for="shafia_name">Nama Lengkap <span>*</span></label>
@@ -194,58 +199,56 @@
 
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("shafia_contact-form");
-      const status = document.getElementById("shafia_form-status");
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("shafia_contact-form");
+  const status = document.getElementById("shafia_form-status");
 
-      const fields = {
-        name: document.getElementById("shafia_name"),
-        email: document.getElementById("shafia_email"),
-        subject: document.getElementById("shafia_subject"),
-        message: document.getElementById("shafia_message")
-      };
+  const fields = {
+    name: document.getElementById("shafia_name"),
+    email: document.getElementById("shafia_email"),
+    subject: document.getElementById("shafia_subject"),
+    message: document.getElementById("shafia_message")
+  };
 
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        let valid = true;
+    let valid = true;
 
-        Object.entries(fields).forEach(([key, field]) => {
-          const error = document.querySelector(
-            '[data-error="' + key + '"]'
-          );
+    Object.entries(fields).forEach(([key, field]) => {
+      const error = document.querySelector(
+        '[data-error="' + key + '"]'
+      );
 
-          error.textContent = "";
+      error.textContent = "";
 
-          if (!field.value.trim()) {
-            error.textContent = "Bagian ini wajib diisi.";
-            valid = false;
-          } else if (key === "name" && field.value.trim().length < 2) {
-            error.textContent = "Nama minimal 2 karakter.";
-            valid = false;
-          } else if (key === "email" && !field.validity.valid) {
-            error.textContent = "Masukkan email yang valid.";
-            valid = false;
-          } else if (key === "message" && field.value.trim().length < 10) {
-            error.textContent = "Pesan minimal 10 karakter.";
-            valid = false;
-          }
-        });
-
-        if (!valid) {
-          status.textContent = "";
-          return;
-        }
-
-        status.textContent =
-          "Terima kasih! Formulir berhasil divalidasi.";
-
-        form.reset();
-      });
+      if (!field.value.trim()) {
+        error.textContent = "Bagian ini wajib diisi.";
+        valid = false;
+      } else if (key === "name" && field.value.trim().length < 2) {
+        error.textContent = "Nama minimal 2 karakter.";
+        valid = false;
+      } else if (key === "email" && !field.validity.valid) {
+        error.textContent = "Masukkan email yang valid.";
+        valid = false;
+      } else if (key === "message" && field.value.trim().length < 10) {
+        error.textContent = "Pesan minimal 10 karakter.";
+        valid = false;
+      }
     });
-  </script>
 
+    if (!valid) {
+      status.textContent = "";
+      return;
+    }
+
+    status.textContent = "Mengirim pesan...";
+
+    form.submit();
+  });
+});
+</script>
 </body>
 </html>
 
