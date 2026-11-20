@@ -112,7 +112,8 @@ if (contactForm) {
 
     contactForm.submit();
   });
-
+}
+});
   
 // =====================================
 // FORM PANDUAN MAKAN KUCING
