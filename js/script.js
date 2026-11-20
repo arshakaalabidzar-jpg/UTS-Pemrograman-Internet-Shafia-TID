@@ -113,42 +113,7 @@ if (contactForm) {
     contactForm.submit();
   });
 
-  contactForm.querySelectorAll("input, textarea, select").forEach((field) => {
-    field.addEventListener("input", () => {
-      const errorElement = contactForm.querySelector(
-        `[data-error="${field.name}"]`
-      );
-
-      if (errorElement) errorElement.textContent = "";
-      if (status) status.textContent = "";
-    });
-
-    field.addEventListener("change", () => {
-      const errorElement = contactForm.querySelector(
-        `[data-error="${field.name}"]`
-      );
-
-      if (errorElement) errorElement.textContent = "";
-    });
-  });
-}
-    });
-
-    contactForm.querySelectorAll("input, textarea, select").forEach((field) => {
-      field.addEventListener("input", () => {
-        const errorElement = contactForm.querySelector(`[data-error="${field.name}"]`);
-        if (errorElement) errorElement.textContent = "";
-        if (status) status.textContent = "";
-      });
-      field.addEventListener("change", () => {
-        const errorElement = contactForm.querySelector(`[data-error="${field.name}"]`);
-        if (errorElement) errorElement.textContent = "";
-      });
-    });
-  }
-});
-
-
+  
 // =====================================
 // FORM PANDUAN MAKAN KUCING
 // =====================================
