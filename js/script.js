@@ -56,51 +56,82 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Validasi form kontak (demo front-end, tidak mengirim email)
-  const contactForm = document.getElementById("shafia_contact-form");
-  if (contactForm) {
-    const status = document.getElementById("shafia_form-status");
+  // Validasi dan pengiriman form kontak
+const contactForm = document.getElementById("shafia_contact-form");
 
-    const showError = (field, message) => {
-      const errorElement = contactForm.querySelector(`[data-error="${field}"]`);
-      if (errorElement) errorElement.textContent = message;
-    };
+if (contactForm) {
+  const status = document.getElementById("shafia_form-status");
 
-    contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
+  const showError = (field, message) => {
+    const errorElement = contactForm.querySelector(`[data-error="${field}"]`);
+    if (errorElement) errorElement.textContent = message;
+  };
 
-      const name = contactForm.elements.name.value.trim();
-      const email = contactForm.elements.email.value.trim();
-      const subject = contactForm.elements.subject.value;
-      const message = contactForm.elements.message.value.trim();
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      let valid = true;
+    const name = contactForm.elements.name.value.trim();
+    const email = contactForm.elements.email.value.trim();
+    const subject = contactForm.elements.subject.value;
+    const message = contactForm.elements.message.value.trim();
 
-      ["name", "email", "subject", "message"].forEach((field) => showError(field, ""));
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let valid = true;
+
+    ["name", "email", "subject", "message"].forEach((field) => {
+      showError(field, "");
+    });
+
+    if (status) status.textContent = "";
+
+    if (name.length < 2) {
+      showError("name", "Nama minimal terdiri dari 2 karakter.");
+      valid = false;
+    }
+
+    if (!emailPattern.test(email)) {
+      showError("email", "Masukkan alamat email yang valid.");
+      valid = false;
+    }
+
+    if (!subject) {
+      showError("subject", "Silakan pilih topik pesan.");
+      valid = false;
+    }
+
+    if (message.length < 10) {
+      showError("message", "Pesan minimal terdiri dari 10 karakter.");
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    if (status) {
+      status.textContent = "Mengirim pesan...";
+    }
+
+    contactForm.submit();
+  });
+
+  contactForm.querySelectorAll("input, textarea, select").forEach((field) => {
+    field.addEventListener("input", () => {
+      const errorElement = contactForm.querySelector(
+        `[data-error="${field.name}"]`
+      );
+
+      if (errorElement) errorElement.textContent = "";
       if (status) status.textContent = "";
+    });
 
-      if (name.length < 2) {
-        showError("name", "Nama minimal terdiri dari 2 karakter.");
-        valid = false;
-      }
-      if (!emailPattern.test(email)) {
-        showError("email", "Masukkan alamat email yang valid.");
-        valid = false;
-      }
-      if (!subject) {
-        showError("subject", "Silakan pilih topik pesan.");
-        valid = false;
-      }
-      if (message.length < 10) {
-        showError("message", "Pesan minimal terdiri dari 10 karakter.");
-        valid = false;
-      }
+    field.addEventListener("change", () => {
+      const errorElement = contactForm.querySelector(
+        `[data-error="${field.name}"]`
+      );
 
-      if (valid && status) {
-        status.textContent = "Terima kasih! Pesan berhasil divalidasi. (Demo akademik — belum dikirim ke server.)";
-        contactForm.reset();
-      }
+      if (errorElement) errorElement.textContent = "";
+    });
+  });
+}
     });
 
     contactForm.querySelectorAll("input, textarea, select").forEach((field) => {
